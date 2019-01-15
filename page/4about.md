@@ -18,10 +18,10 @@ python ML NLP
 ## 联系我
 
 * GitHub：[373Kice](https://github.com/373Kice)
-<!-- * email：gaohaoyang126@126.com
-* [Weibo](http://weibo.com/3115521wh)
-* [知乎](https://www.zhihu.com/people/gaohaoyang)
-* [Facebook](https://www.facebook.com/gaohaoyang.water)
+* email：ymj155@gmail.com
+* [Weibo](https://weibo.com/2922030663)
+* [知乎](https://www.zhihu.com/people/373kice)
+<!-- * [Facebook](https://www.facebook.com/gaohaoyang.water)
 * [Twitter](https://twitter.com/gaohaoyang126)
 * [豆瓣](https://www.douban.com/people/42525035/)
 * [豆瓣音乐人-浩阳的小站](https://site.douban.com/haoyangaiyinyue/) -->

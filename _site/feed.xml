@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>373Kice 的博客</title>
+    <description></description>
+    <link>http://localhost:4001/</link>
+    <atom:link href="http://localhost:4001/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 15 Jan 2019 21:57:55 +0800</pubDate>
+    <lastBuildDate>Tue, 15 Jan 2019 21:57:55 +0800</lastBuildDate>
+    <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>特别鸣谢</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#创建说明&quot; id=&quot;markdown-toc-创建说明&quot;&gt;创建说明&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;创建说明&quot;&gt;创建说明&lt;/h1&gt;
+
+本博客模板fork自&lt;a href=&quot;https://github.com/xudailong/xudailong.github.io&quot;&gt;https://github.com/xudailong/xudailong.github.io&lt;/a&gt;
+
+参考教程&lt;a href=&quot;https://blog.csdn.net/xudailong_blog/article/details/78762262&quot;&gt;https://blog.csdn.net/xudailong_blog/article/details/78762262&lt;/a&gt;
+
+等等
+</description>
+        <pubDate>Tue, 15 Jan 2019 00:00:00 +0800</pubDate>
+        <link>http://localhost:4001/2019/01/15/%E8%87%B4%E8%B0%A2/</link>
+        <guid isPermaLink="true">http://localhost:4001/2019/01/15/%E8%87%B4%E8%B0%A2/</guid>
+        
+        <category>fun</category>
+        
+        
+        <category>fun</category>
+        
+      </item>
+    
+      <item>
+        <title>我的第一个博文</title>
+        <description>
+</description>
+        <pubDate>Tue, 15 Jan 2019 00:00:00 +0800</pubDate>
+        <link>http://localhost:4001/2019/01/15/MyFirstBlog/</link>
+        <guid isPermaLink="true">http://localhost:4001/2019/01/15/MyFirstBlog/</guid>
+        
+        <category>fun</category>
+        
+        
+        <category>fun</category>
+        
+      </item>
+    
+      <item>
+        <title>Jekyll 搭建静态博客</title>
+        <description>
+保留的原来模板里的东西
+
+一直以来都想搭建一个自己的博客，但是近半年做项目太忙，再加上教研室的网络很坑爹，所以也一直没顾得上。之前用过 WordPress 托管在免费的京东云擎上，但是速度太慢。在知乎上看到一些相关的内容，于是选择了在github上用jekyll搭建博客。
+
+</description>
+        <pubDate>Mon, 16 Feb 2015 06:14:54 +0800</pubDate>
+        <link>http://localhost:4001/2015/02/16/create-my-blog-with-jekyll/</link>
+        <guid isPermaLink="true">http://localhost:4001/2015/02/16/create-my-blog-with-jekyll/</guid>
+        
+        <category>jekyll</category>
+        
+        <category>RubyGems</category>
+        
+        
+        <category>jekyll</category>
+        
+      </item>
+    
+      <item>
+        <title>hello jekyll!</title>
+        <description>保留的原来模板里的东西 当年创建 jekyll 时默认的一篇文章，没什么意义，我也一直没删除，留个纪念吧。</description>
+        <pubDate>Tue, 10 Feb 2015 23:14:54 +0800</pubDate>
+        <link>http://localhost:4001/2015/02/10/welcome-to-jekyll/</link>
+        <guid isPermaLink="true">http://localhost:4001/2015/02/10/welcome-to-jekyll/</guid>
+        
+        <category>jekyll</category>
+        
+        
+        <category>jekyll</category>
+        
+      </item>
+    
+  </channel>
+</rss>
