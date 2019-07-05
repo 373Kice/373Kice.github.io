@@ -4,18 +4,13 @@ title:  "Jekyll 搭建静态博客"
 date:   2015-02-15 22:14:54
 categories: jekyll
 tags: jekyll RubyGems
+excerpt: 保留的原来模板里的东西
+
+一直以来都想搭建一个自己的博客，但是近半年做项目太忙，再加上教研室的网络很坑爹，所以也一直没顾得上。之前用过 WordPress 托管在免费的京东云擎上，但是速度太慢。在知乎上看到一些相关的内容，于是选择了在github上用jekyll搭建博客。
 ---
 
 * content
 {:toc}
-
-保留的原来模板里的东西
-
-一直以来都想搭建一个自己的博客，但是近半年做项目太忙，再加上教研室的网络很坑爹，所以也一直没顾得上。之前用过 WordPress 托管在免费的京东云擎上，但是速度太慢。在知乎上看到一些相关的内容，于是选择了在github上用jekyll搭建博客。
-
-
-
-
 
 ## 搭建过程
 
@@ -34,23 +29,23 @@ ruby官网下载安装：[https://www.ruby-lang.org/en/downloads/](https://www.r
 
 ### 安装RubyGems
 
-官网下载 [http://rubygems.org/pages/download](http://rubygems.org/pages/download) rubygems-2.4.5.zip   
+官网下载 [http://rubygems.org/pages/download](http://rubygems.org/pages/download) rubygems-2.4.5.zip
 
-cd到RubyGems目录   
+cd到RubyGems目录
 
 ![](http://ww1.sinaimg.cn/large/7011d6cfjw1f2ue1l2yscj20gk02amxj.jpg)
 
-执行安装   
+执行安装
 
 ![](http://ww1.sinaimg.cn/large/7011d6cfjw1f2ue1w8eqnj20bx00hglg.jpg)  
 
 ### 用RubyGems安装Jekyll
 
-执行下面的语句安装   
+执行下面的语句安装
 
 ![](http://ww4.sinaimg.cn/large/7011d6cfjw1f2ue2g2p3uj207x00ft8j.jpg)
 
-安装结束画面   
+安装结束画面
 
 ![](http://ww4.sinaimg.cn/large/7011d6cfjw1f2ue32drwhj20hv09xq5m.jpg)
 
@@ -60,17 +55,17 @@ cd到RubyGems目录
 
 在d盘新建一个工作区jekyllWorkspace
 
-cd到jekyllWorkspace   
+cd到jekyllWorkspace
 
-执行jekyll new name创建新的工作区   
+执行jekyll new name创建新的工作区
 
 ![](http://ww3.sinaimg.cn/large/7011d6cfjw1f2ue3lt31nj20cj02nt8u.jpg)
 
-文件结构如下：   
+文件结构如下：
 
 ![](http://ww1.sinaimg.cn/large/7011d6cfjw1f2ue3ujsybj20ek06wabh.jpg)
 
-cd到博客文件夹，开启服务器   
+cd到博客文件夹，开启服务器
 
 ![](http://ww1.sinaimg.cn/large/7011d6cfjw1f2ue47y9lgj20ao00f0sl.jpg)
 
@@ -84,23 +79,23 @@ watch为了检测文件夹内的变化，即修改后不需要重新启动jekyll
 
 ![](http://ww4.sinaimg.cn/large/7011d6cfjw1f2ue4v42koj20g505bdgy.jpg)
 
-访问 http://localhost:4000/   
+访问 <http://localhost:4000/>
 
 ![](http://ww1.sinaimg.cn/large/7011d6cfjw1f2ue56ckwoj20je0eumz3.jpg)
 
-详细文章页面   
+详细文章页面
 
 ![](http://ww2.sinaimg.cn/large/7011d6cfjw1f2ue5f3j9cj20je0gyq7a.jpg)
 
 ## 后续
 
-*  整个安装过程参考了jekyll官网，注意jekyll还有一个简体中文官网，不过比较坑（我就被坑了），有些内容没有翻译过来，有可能会走弯路，建议如果想看中文的相关资料，也要中英对照着阅读。[jekyll中文网 http://jekyllcn.com](http://jekyllcn.com), [jekyll英文网 http://jekyllrb.com](http://jekyllrb.com)
-*  jekyll中的css是用sass写的，当然直接在`_sass/_layout.scss`中添加css也是可以的。
-*  本文是用Markdown格式来写的，相关语法可参考： [Markdown 语法说明 (简体中文版) http://wowubuntu.com/markdown/](http://wowubuntu.com/markdown/)  
-*  按照本文的说明搭建完博客后，用`github Pages`托管就可以看到了。注意，在github上面好像不支持rouge，所以要push到github上时，我将配置文件_config.yml中的代码高亮改变为`highlighter: pygments`就可以了
-*  博客默认是没有评论系统的，本文的评论系统使用了多说，详细安装办法可访问[多说官网 http://duoshuo.com/](http://duoshuo.com/)，当然也可以使用[搜狐畅言 http://changyan.sohu.com/](http://changyan.sohu.com/)作为评论系统。
-*  也可以绑定自己的域名，如果没有域名，可以在[godaddy http://www.godaddy.com/](http://www.godaddy.com/)上将域名放入购物车等待降价，买之。
-*  祝各位新年快乐！
+* 整个安装过程参考了jekyll官网，注意jekyll还有一个简体中文官网，不过比较坑（我就被坑了），有些内容没有翻译过来，有可能会走弯路，建议如果想看中文的相关资料，也要中英对照着阅读。[jekyll中文网 http://jekyllcn.com](http://jekyllcn.com), [jekyll英文网 http://jekyllrb.com](http://jekyllrb.com)
+* jekyll中的css是用sass写的，当然直接在`_sass/_layout.scss`中添加css也是可以的。
+* 本文是用Markdown格式来写的，相关语法可参考：[Markdown 语法说明 (简体中文版) http://wowubuntu.com/markdown/](http://wowubuntu.com/markdown/)  
+* 按照本文的说明搭建完博客后，用`github Pages`托管就可以看到了。注意，在github上面好像不支持rouge，所以要push到github上时，我将配置文件_config.yml中的代码高亮改变为`highlighter: pygments`就可以了
+* 博客默认是没有评论系统的，本文的评论系统使用了多说，详细安装办法可访问[多说官网 http://duoshuo.com/](http://duoshuo.com/)，当然也可以使用[搜狐畅言 http://changyan.sohu.com/](http://changyan.sohu.com/)作为评论系统。
+* 也可以绑定自己的域名，如果没有域名，可以在[godaddy http://www.godaddy.com/](http://www.godaddy.com/)上将域名放入购物车等待降价，买之。
+* 祝各位新年快乐！
 
 ---
 
@@ -110,7 +105,7 @@ watch为了检测文件夹内的变化，即修改后不需要重新启动jekyll
 
 **错误代码：**
 
-```
+```cmd
 C:/Ruby22/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require': cannot load such file -- hitimes/hitimes (LoadError)
 ```
 
@@ -122,7 +117,7 @@ C:/Ruby22/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require': ca
 >
 > 所以卸载 hitimes 并通过 `--platform ruby` 重装即可。代码如下：
 
-```
+```cmd
 gem uni hitimes
 **Remove ALL versions**
 gem ins hitimes -v 1.2.1 --platform ruby
@@ -132,7 +127,7 @@ gem ins hitimes -v 1.2.1 --platform ruby
 
 下面是我自己的卸载和安装过程：
 
-```
+```cmd
 E:\GitWorkSpace\gaohaoyang.github.io>gem uni hitimes
 
 You have requested to uninstall the gem:
@@ -153,6 +148,5 @@ Installing ri documentation for hitimes-1.2.1
 Done installing documentation for hitimes after 1 seconds
 1 gem installed
 ```
-
 
 关于，[hitimes](https://rubygems.org/gems/hitimes/versions/1.2.2) 是一个快速的高效的定时器解决方案库，详情可以去官网查看。
