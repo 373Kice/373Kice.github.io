@@ -5,6 +5,7 @@ categories: fun
 tags:  fun
 author: 373Kice
 excerpt: 学习一下如何使用markdown
+mathjax: true
 ---
 * content
 {:toc}
