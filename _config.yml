@@ -29,8 +29,8 @@ description_footer: 来自373Kice 的博客！
 # two ways to comment, only choose one, and use your own short name
 # 两种评论插件，选一个就好了，使用自己的 short_name
 # 来必力
-duoshuo_shortname: #hygblog
-disqus_shortname: 373Kice #gaohaoyang
+# duoshuo_shortname: #hygblog
+# disqus_shortname: 373Kice #gaohaoyang
 City_uid: MTAyMC80NTEwOS8yMTYyNg==
 
 # statistic analysis 统计代码
