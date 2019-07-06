@@ -19,8 +19,10 @@ python ML NLP
 
 * GitHub：[373Kice](https://github.com/373Kice)
 * email：<ymj155@gmail.com>
-* [Weibo](https://weibo.com/2922030663)
-* [知乎](https://www.zhihu.com/people/373kice)
+* 微博：[o摄氏度水蒸气](https://weibo.com/u/2922030663)
+* 知乎：[373Kice](https://www.zhihu.com/people/373kice)
+<!-- * facebook: [Mingjia Yao](https://www.facebook.com/mingjia.yao) -->
+* twitter: [373Kice](https://twitter.com/373Kice)
 
 <!-- 
 * [豆瓣](https://www.douban.com/people/42525035/)
