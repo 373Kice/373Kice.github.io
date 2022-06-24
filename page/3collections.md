@@ -54,6 +54,6 @@ type: page
 
     新建 tab 时，显示 dribbble 上的精选作品。
 
-## Comments
+<!-- ## Comments
 
-{% include comments.html %}
+{% include comments.html %} -->
