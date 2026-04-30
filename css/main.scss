@@ -45,7 +45,17 @@
  * variables
  */
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import "reset", "header", "post", "page", "syntax-highlighting", "index", "demo", "footer", "scrollbar", "backToTop";
+// Updated to use @use instead of deprecated @import for Sass compatibility
+@use "reset";
+@use "header";
+@use "post";
+@use "page";
+@use "syntax-highlighting";
+@use "index";
+@use "demo";
+@use "footer";
+@use "scrollbar";
+@use "backToTop";
 // 两个人在列车上相遇
 // 一段旅程充满了诗意
 // 你突然说你要下车
