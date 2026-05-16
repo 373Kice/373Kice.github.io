@@ -4,64 +4,63 @@ layout: default
 
 <div class="page clearfix" index>
     <div class="left">
-        <h1>Welcome to 373Kice's blog </h1>
-        <small>随手记录一些</small>
+        <h1>Welcome to 373Kice's blog</h1>
+        <small style="color:#6b7280; font-size:14px;">随手记录一些</small>
         <hr>
         <ul>
             {% for post in paginator.posts %}
               <li>
-                <h2>
-                  <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>{{ post.date | date: "%F" }}
-                    </div>
-                    <div class="label-card">
-                        {% if post.author %}<i class="fa fa-user"></i>{{ post.author }}
-                        {% endif %}
-                    </div>
-                    <div class="label-card">
-                        {% if page.meta %}<i class="fa fa-key"></i>{{ page.meta }}  {% endif %}
-                    </div>
+                <div class="post-card">
+                  <h2>
+                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                  </h2>
+                  <div class="label">
+                      <div class="label-card">
+                          <i class="fa-regular fa-calendar"></i>{{ post.date | date: "%F" }}
+                      </div>
+                      <div class="label-card">
+                          {% if post.author %}<i class="fa-regular fa-user"></i>{{ post.author }}
+                          {% endif %}
+                      </div>
+                      <div class="label-card">
+                          {% if page.meta %}<i class="fa-solid fa-key"></i>{{ page.meta }}  {% endif %}
+                      </div>
 
-                    <div class="label-card">
-                    {% include category.html %}
-                    </div>
+                      <div class="label-card">
+                      {% include category.html %}
+                      </div>
 
-                    <div class="label-card">
-                    {% include tag.html %}
-                    </div>
+                      <div class="label-card">
+                      {% include tag.html %}
+                      </div>
+                  </div>
+                  <div class="excerpt">
+                      {{ post.brief_intro | default: post.excerpt }}
+                  </div>
+                  <div class="read-all">
+                      <a href="{{ post.url | prepend: site.baseurl }}"><i class="fa-solid fa-arrow-right"></i> 阅读全文</a>
+                  </div>
                 </div>
-                <div class="excerpt">
-                    {{ post.brief_intro }}
-                </div>
-                <div class="read-all">
-                    <a  href="{{ post.url | prepend: site.baseurl }}"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
               </li>
             {% endfor %}
         </ul>
 
-
-
         <!-- Pagination links -->
         <div class="pagination">
           {% if paginator.previous_page %}
-            <a href="/index.html" class="previous"><i class="fa fa-angle-double-left"></i></a>
-            <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="previous"><i class="fa fa-angle-left"></i></a>
+            <a href="/index.html" class="previous"><i class="fa-solid fa-angles-left"></i></a>
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="previous"><i class="fa-solid fa-angle-left"></i></a>
           {% else %}
-            <span class="previous disable"><i class="fa fa-angle-double-left"></i></span>
-            <span class="previous disable"><i class="fa fa-angle-left"></i></span>
+            <span class="previous disable"><i class="fa-solid fa-angles-left"></i></span>
+            <span class="previous disable"><i class="fa-solid fa-angle-left"></i></span>
           {% endif %}
-          <span class="page_number ">{{ paginator.page }}/{{ paginator.total_pages }}</span>
+          <span class="page_number">{{ paginator.page }}/{{ paginator.total_pages }}</span>
           {% if paginator.next_page %}
-            <a href="{{ paginator.next_page_path }}" class="next"><i class="fa fa-angle-right"></i></a>
-            <a href="{{ site.baseurl }}/page{{ paginator.total_pages }}" class="next"><i class="fa fa-angle-double-right"></i></a>
+            <a href="{{ paginator.next_page_path }}" class="next"><i class="fa-solid fa-angle-right"></i></a>
+            <a href="{{ site.baseurl }}/page{{ paginator.total_pages }}" class="next"><i class="fa-solid fa-angles-right"></i></a>
           {% else %}
-            <span class="next disable"><i class="fa fa-angle-right"></i></span>
-            <span class="next disable"><i class="fa fa-angle-double-right"></i></span>
+            <span class="next disable"><i class="fa-solid fa-angle-right"></i></span>
+            <span class="next disable"><i class="fa-solid fa-angles-right"></i></span>
           {% endif %}
         </div>
     </div>
@@ -70,7 +69,7 @@ layout: default
         <div class="wrap">
             <div class="side">
                 <div>
-                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    <i class="fa-solid fa-pen-to-square" aria-hidden="true"></i>
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
@@ -81,9 +80,9 @@ layout: default
             </div>
 
             <!-- Content -->
-            <div class="side ">
+            <div class="side">
                 <div>
-                    <i class="fa fa-th-list"></i>
+                    <i class="fa-solid fa-list"></i>
                     Categories
                 </div>
                 <ul class="content-ul" cate>
@@ -102,7 +101,7 @@ layout: default
             <!-- 其他div框放到这里 -->
             <div class="side">
                 <div>
-                    <i class="fa fa-tags"></i>
+                    <i class="fa-solid fa-tags"></i>
                     Tags
                 </div>
                 <div class="tags-cloud">
@@ -156,11 +155,3 @@ layout: default
         </div>
     </div>
 </div>
-<!-- <script src="{{ "/js/scroll.min.js " | prepend: site.baseurl }}" charset="utf-8"></script> -->
-<!-- <script src="{{ "/js/pageContent.js " | prepend: site.baseurl }}" charset="utf-8"></script> -->
-
-
-<!-- hitwebcounter Code START -->
-<!-- <a href="http://www.hitwebcounter.com" target="_blank"> -->
-<!-- <img src="http://hitwebcounter.com/counter/counter.php?page=7054238&style=0038&nbdigits=5&type=page&initCount=0" title="install tracking codes" Alt="install tracking codes"   border="0" > -->
-<!-- </a>  -->

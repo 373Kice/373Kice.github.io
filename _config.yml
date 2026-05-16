@@ -61,3 +61,14 @@ excerpt_separator: "\n\n\n\n"
 plugins: [jekyll-paginate]
 paginate: 6
 port: 4001
+
+# Giscus 评论系统配置
+# 使用说明：
+# 1. 在仓库 Settings -> General -> Features 中开启 Discussions
+# 2. 在 Discussions 中创建一个分类（如 "Comments"）
+# 3. 访问 https://giscus.app/zh-CN 获取 repo-id 和 category-id
+# 4. 填入下方对应字段，取消注释即可启用
+# giscus_repo: "373Kice/373Kice.github.io"
+# giscus_repo_id: "YOUR_REPO_ID"
+# giscus_category: "Comments"
+# giscus_category_id: "YOUR_CATEGORY_ID"

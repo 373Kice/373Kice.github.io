@@ -8,18 +8,18 @@ layout: default
         <div class="label">
 
             <div class="label-card">
-                <i class="fa fa-calendar"></i>{{ page.date | date: "%F" }}
+                <i class="fa-regular fa-calendar"></i>{{ page.date | date: "%F" }}
             </div>
 
             <div class="label-card">
-                {% if page.author %}<i class="fa fa-user"></i>{{ page.author }}
+                {% if page.author %}<i class="fa-regular fa-user"></i>{{ page.author }}
                 {% endif %}
             </div>
             <div class="label-card">
-                <p><i class="fa fa-eye fa-x"></i><span id="busuanzi_value_page_pv"></span></p>
+                <p><i class="fa-regular fa-eye"></i><span id="busuanzi_value_page_pv"></span></p>
             </div>
             <div class="label-card">
-                {% if page.meta %}<i class="fa fa-key"></i>{{ page.meta }}  {% endif %}
+                {% if page.meta %}<i class="fa-solid fa-key"></i>{{ page.meta }}  {% endif %}
             </div>
 
             <div class="label-card">
@@ -31,7 +31,6 @@ layout: default
             </div>
 
         </div>
-        <hr>
         <article itemscope itemtype="http://schema.org/BlogPosting">
         {{content}}
         </article>
@@ -71,7 +70,7 @@ layout: default
 
 
     </div>
-    <button class="anchor"><i class="fa fa-anchor"></i></button>
+    <button class="anchor"><i class="fa-solid fa-anchor"></i></button>
     <div class="right">
         <div class="wrap">
 
@@ -93,9 +92,6 @@ layout: default
     </div>
 </div>
 <script>
-/**
- * target _blank
- */
 (function() {
     var aTags = document.querySelectorAll('article a:not([id])')
     for (var i = 0; i < aTags.length; i++) {

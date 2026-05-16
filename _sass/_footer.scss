@@ -3,51 +3,70 @@
     right: 0;
     bottom: 0;
     left: 0;
-
     text-align: center;
-    // margin-top: 50px;
-    background-color: #2b2b3c;
-    box-shadow: 0 -2px 4px 1px rgba(0,0,0,0.5);
-    color: #bbb;
+    background-color: #ffffff;
+    border-top: 1px solid #e5e7eb;
+    color: #6b7280;
     .wrapper {
-        width: 1140px;
+        width: 1200px;
         margin: 0 auto;
-        padding: 15px 0;
+        padding: 24px 0;
         text-align: center;
-        font-size: 14px;
+        font-size: 13px;
         p {
-            margin: 0;
+            margin: 0 0 8px;
             line-height: 1.6;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
         }
         .contact {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
             a {
-                color: #ccc;
-                transition: 0.3s ease;
+                color: #6b7280;
+                transition: all 0.2s ease;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 32px;
+                height: 32px;
+                border-radius: 8px;
                 &:hover {
-                    color: #fff;
+                    color: #2563eb;
+                    background: #eff6ff;
                 }
                 i {
-                    margin: 0 5px;
-                    font-size: 20px;
+                    font-size: 18px;
                 }
             }
         }
         .description {
             display: inline-block;
+            color: #9ca3af;
         }
         .power {
             a {
-                color: #8F90C5;
-                transition: 0.3s ease;
+                color: #2563eb;
+                transition: color 0.2s ease;
                 &:hover {
-                    color: #fff;
+                    color: #1d4ed8;
+                }
+            }
+        }
+        .beian {
+            a {
+                color: #9ca3af;
+                &:hover {
+                    color: #6b7280;
                 }
             }
         }
     }
 }
-@media screen and (max-width:1200px) and (min-width: 770px) {
+@media screen and (max-width: 1240px) and (min-width: 770px) {
     .site-footer {
         .wrapper {
             width: 90%;
@@ -58,6 +77,8 @@
     .site-footer {
         .wrapper {
             width: 90%;
+            font-size: 12px;
+            padding: 18px 0;
         }
     }
 }
