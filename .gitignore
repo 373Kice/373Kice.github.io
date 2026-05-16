@@ -69,6 +69,11 @@ docs/_build/
 # PyBuilder
 target/
 
+# Jekyll
+_site/
+.jekyll-cache/
+.sass-cache/
+
 # Jupyter Notebook
 .ipynb_checkpoints
 
