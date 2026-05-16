@@ -45,17 +45,18 @@
  * variables
  */
 // Import partials from `sass_dir` (defaults to `_sass`)
-// Updated to use @use instead of deprecated @import for Sass compatibility
-@use "reset";
-@use "header";
-@use "post";
-@use "page";
-@use "syntax-highlighting";
-@use "index";
-@use "demo";
-@use "footer";
-@use "scrollbar";
-@use "backToTop";
+// Using @import for maximum compatibility with GitHub Pages build environment
+// (GitHub Pages uses libsass which does not yet support @use)
+@import "reset";
+@import "header";
+@import "post";
+@import "page";
+@import "syntax-highlighting";
+@import "index";
+@import "demo";
+@import "footer";
+@import "scrollbar";
+@import "backToTop";
 // 两个人在列车上相遇
 // 一段旅程充满了诗意
 // 你突然说你要下车
