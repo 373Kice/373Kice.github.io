@@ -86,12 +86,12 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
-  jekyll
-  jekyll-paginate
-  kramdown
-  rouge
-  wdm
-  webrick
+  jekyll (~> 4.4)
+  jekyll-paginate (~> 1.1)
+  kramdown (~> 2.5)
+  rouge (~> 4.5)
+  wdm (~> 0.2)
+  webrick (~> 1.9)
 
 BUNDLED WITH
    2.3.25

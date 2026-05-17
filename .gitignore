@@ -74,6 +74,20 @@ _site/
 .jekyll-cache/
 .sass-cache/
 
+# IDE
+.vs/
+.vscode/
+.bundle/
+
+# Node
+node_modules/
+
+# WorkBuddy
+deliverables/
+
+# Env (API keys)
+.env
+
 # Jupyter Notebook
 .ipynb_checkpoints
 

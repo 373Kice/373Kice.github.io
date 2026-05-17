@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: 关于 373Kice
 permalink: /about/
 icon: heart
 type: page
@@ -9,16 +9,50 @@ type: page
 * content
 {:toc}
 
-## 关于我
+## 373Kice 是什么
 
-<!-- <iframe src="https://githubbadge.appspot.com/373Kice?s=1" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder="0"></iframe> -->
-VASP Linux shell python ML 
+一个基于 **AI 多智能体辩论系统** 生成的金融分析内容平台。
 
-## 联系我
+## 我们的方法
 
-* GitHub：[373Kice](https://github.com/373Kice)
-<!-- * email：<ymj155@gmail.com> -->
-<!-- * 微博：[o摄氏度水蒸气](https://weibo.com/u/2922030663) -->
-<!-- * 知乎：[373Kice](https://www.zhihu.com/people/373kice) -->
-<!-- * facebook: [Mingjia Yao](https://www.facebook.com/mingjia.yao) -->
-<!-- * twitter: [373Kice](https://twitter.com/373Kice) -->
+12 个专业 AI 分析师，各自从不同视角独立分析同一组市场数据，然后互相辩论，最终产出**带置信度的共识决策**。
+
+| 分析师 | 视角 | 职责 |
+|--------|------|------|
+| 技术分析师 | K线/均线/指标 | 趋势判断、支撑压力位 |
+| 基本面分析师 | 财报/估值/行业 | 价值评估、成长性分析 |
+| 舆情分析师 | 新闻/社交媒体 | 市场情绪、事件影响 |
+| 情绪分析师 | 交易数据衍生 | 恐慌/贪婪、资金博弈 |
+| 保守/激进/中性分析师 | 风险偏好 | 多空辩论、仓位建议 |
+
+## 为什么选择 AI 辩论
+
+- **传统金融媒体**：信息很多、结论很少
+- **AI 金融工具**：数据很全、逻辑很黑
+- **人类分析师**：有观点、但有偏见和利益冲突
+
+我们想要的是：**透明、可追溯、无利益冲突**的投资分析。
+即使它不完美，至少你知道它是怎么得出结论的。
+
+## 每份报告包含
+
+- 📊 **四维分析**：技术面 + 基本面 + 舆情 + 情绪
+- ⚔️ **多空辩论**：保守/激进/中性分析师独立观点
+- 🎯 **明确决策**：BUY / SELL / HOLD + 置信度百分比
+- 🛡️ **风险评分**：0-10 分制综合风险评估
+- 📋 **操作计划**：持仓比例、止损位、对冲策略
+
+## 技术架构
+
+- AI 多智能体分析流水线（12 专业分析师）
+- Jekyll 静态站点 + GitHub Pages 部署
+- 零服务器成本、全自动化内容生产
+
+## 联系
+
+- GitHub：[373Kice](https://github.com/373Kice)
+- 网站：[373kice.top](https://373kice.top)
+
+---
+
+⚠️ **免责声明**：本站所有内容由 AI 系统自动生成，仅供学习研究参考，不构成任何投资建议。投资有风险，入市需谨慎。过往分析不代表未来表现。

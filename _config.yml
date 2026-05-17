@@ -6,10 +6,10 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: 373Kice 的博客
-brief-intro: Student and Python Coder
+title: 373Kice · AI投资决策报告
+brief-intro: AI多智能体辩论式A股分析 · 带置信度的投资决策
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://373Kice.github.io" # the base hostname & protocol for your site
+url: "https://373kice.top" # the base hostname & protocol for your site
 
 permalink: /:year/:month/:day/:title/
 
@@ -23,7 +23,7 @@ github_username:  373Kice
 linkedIn_username: 
 dribbble_username:
 
-description_footer: 来自373Kice 的博客！
+description_footer: AI辩论式投资决策报告 · 透明 · 可追溯 · 零利益冲突
 
 # comments
 # two ways to comment, only choose one, and use your own short name
@@ -61,6 +61,64 @@ excerpt_separator: "\n\n\n\n"
 plugins: [jekyll-paginate]
 paginate: 6
 port: 4001
+
+# Build exclude — 防止无关文件被拷贝到 _site/
+exclude:
+  - "*.py"
+  - "*.ps1"
+  - "*.bat"
+  - "*.cmd"
+  - "*.pptx"
+  - "a_stock_task.xml"
+  - "a_stock_task_simple.xml"
+  - "test/"
+  - "node_modules/"
+  - ".workbuddy/"
+  - "deliverables/"
+  - "Gemfile.lock"
+  - "package-lock.json"
+  - "ppt-*"
+  - "*指南.md"
+  - "系统状态报告.md"
+  - "AD_PROBLEM_SOLUTION.md"
+  - "JEKYLL_AUTO_UPDATE_GUIDE.md"
+  - "README_AUTOMATION.md"
+  - "README_help.md"
+  - "README-zh-cn.md"
+  - "quick_update.md"
+  - "UPDATE_EXECUTION.md"
+  - "UPDATE_GUIDE.md"
+  - "test_*"
+  - "AUTOMATION_START.bat"
+  - "start_jekyll_4002.bat"
+  - "jekyll server.bat"
+  - "setup_task.bat"
+  - "simple_task.bat"
+  - "update_all_deps.bat"
+  - "update_dependencies.rb"
+  - "run_jekyll_service.ps1"
+  - "setup_automation.ps1"
+  - "setup_scheduled_task.ps1"
+  - "setup_scheduled_task_simple.ps1"
+  - "create_daily_report_task.ps1"
+  - "create_simple_daily_task.ps1"
+  - "create_task.cmd"
+  - "verify_fix.py"
+  - "test_automation.py"
+  - "test_enhanced.py"
+  - "check.py"
+  - "check_ad_issues.py"
+  - "read_ppt.py"
+  - "daily_a_stock_analysis.py"
+  - "enhanced_daily_a_stock_analysis.py"
+  - "generate_a_stock_report.py"
+  - "generate_a_stock_report_v2.py"
+  - "generate_ppt.py"
+  - "generate_report_ppt.py"
+  - "simple_generate_report.py"
+  - "analyze_rare_earth_real_data.py"
+  - "analyze_rare_earth_realtime.py"
+  - "analyze_rare_earth_stocks.py"
 
 # Giscus 评论系统配置
 # 使用说明：
