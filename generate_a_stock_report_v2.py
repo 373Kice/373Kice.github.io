@@ -24,11 +24,11 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # ============================================================================
-# 0. API Key 配置
+# 0. API Key 配置（从环境变量读取，请勿硬编码）
 # ============================================================================
 
-# DeepSeek API 配置
-DEEPSEEK_API_KEY = "[REDACTED]"  # 用户提供的API Key
+# DeepSeek API 配置（优先读取环境变量）
+DEEPSEEK_API_KEY = os.getenv('DEEPSEEK_API_KEY') or os.getenv('LITELLM_API_KEY')
 DEEPSEEK_API_BASE = "https://api.deepseek.com"
 DEEPSEEK_MODEL = "deepseek-chat"  # 使用 DeepSeek-V3 模型
 
