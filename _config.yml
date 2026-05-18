@@ -7,6 +7,7 @@
 
 # Site settings
 title: 373Kice · AI投资决策报告
+description: AI多智能体辩论式A股投资决策报告平台，提供带置信度的BUY/SELL/HOLD建议与综合风险评分，覆盖技术面、基本面、舆情和情绪四维分析
 brief-intro: AI多智能体辩论式A股分析 · 带置信度的投资决策
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://373kice.top" # the base hostname & protocol for your site
