@@ -2,156 +2,119 @@
 layout: default
 ---
 
-<div class="page clearfix" index>
-    <div class="left">
-        <h1>Welcome to 373Kice's blog</h1>
-        <small style="color:#6b7280; font-size:14px;">随手记录一些</small>
-        <hr>
-        <ul>
-            {% for post in paginator.posts %}
-              <li>
-                <div class="post-card">
-                  <h2>
-                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                  </h2>
-                  <div class="label">
-                      <div class="label-card">
-                          <i class="fa-regular fa-calendar"></i>{{ post.date | date: "%F" }}
-                      </div>
-                      <div class="label-card">
-                          {% if post.author %}<i class="fa-regular fa-user"></i>{{ post.author }}
-                          {% endif %}
-                      </div>
-                      <div class="label-card">
-                          {% if page.meta %}<i class="fa-solid fa-key"></i>{{ page.meta }}  {% endif %}
-                      </div>
-
-                      <div class="label-card">
-                      {% include category.html %}
-                      </div>
-
-                      <div class="label-card">
-                      {% include tag.html %}
-                      </div>
-                  </div>
-                  <div class="excerpt">
-                      {{ post.brief_intro | default: post.excerpt }}
-                  </div>
-                  <div class="read-all">
-                      <a href="{{ post.url | prepend: site.baseurl }}"><i class="fa-solid fa-arrow-right"></i> 阅读全文</a>
-                  </div>
-                </div>
-              </li>
-            {% endfor %}
-        </ul>
-
-        <!-- Pagination links -->
-        <div class="pagination">
-          {% if paginator.previous_page %}
-            <a href="/index.html" class="previous"><i class="fa-solid fa-angles-left"></i></a>
-            <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="previous"><i class="fa-solid fa-angle-left"></i></a>
-          {% else %}
-            <span class="previous disable"><i class="fa-solid fa-angles-left"></i></span>
-            <span class="previous disable"><i class="fa-solid fa-angle-left"></i></span>
-          {% endif %}
-          <span class="page_number">{{ paginator.page }}/{{ paginator.total_pages }}</span>
-          {% if paginator.next_page %}
-            <a href="{{ paginator.next_page_path }}" class="next"><i class="fa-solid fa-angle-right"></i></a>
-            <a href="{{ site.baseurl }}/page{{ paginator.total_pages }}" class="next"><i class="fa-solid fa-angles-right"></i></a>
-          {% else %}
-            <span class="next disable"><i class="fa-solid fa-angle-right"></i></span>
-            <span class="next disable"><i class="fa-solid fa-angles-right"></i></span>
-          {% endif %}
-        </div>
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <h1 class="hero-title">AI 辩论式 A 股投资决策报告</h1>
+    <p class="hero-subtitle">
+      12 个专业 AI 分析师 · 四维分析框架 · 多空辩论 · 带置信度的明确决策
+    </p>
+    <p class="hero-desc">
+      不再面对模棱两可的财经资讯。每篇报告给你明确的 <strong>BUY / SELL / HOLD</strong>，
+      附置信度评分和 0-10 风险评级——<em>并且告诉你 AI 是怎么得出结论的</em>。
+    </p>
+    <div class="hero-cta">
+      <a href="#latest" class="btn-primary">查看最新报告</a>
+      <a href="#method" class="btn-secondary">了解分析方法</a>
     </div>
-    <!-- <button class="anchor"><i class="fa fa-anchor"></i></button> -->
-    <div class="right">
-        <div class="wrap">
-            <div class="side">
-                <div>
-                    <i class="fa-solid fa-pen-to-square" aria-hidden="true"></i>
-                    Recent Posts
-                </div>
-                <ul class="content-ul" recent>
-                    {% for post in site.posts offset: 0 limit: 10  %}
-                        <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-                    {% endfor %}
-                </ul>
-            </div>
+  </div>
+</section>
 
-            <!-- Content -->
-            <div class="side">
-                <div>
-                    <i class="fa-solid fa-list"></i>
-                    Categories
-                </div>
-                <ul class="content-ul" cate>
-                    {% for category in site.categories %}
-                    <li>
-                        <a href="{{ root_url }}/{{ site.category_dir }}#{{ category | first }}" class="categories-list-item" cate="{{ category | first }}">
-                            <span class="name">
-                                {{ category | first }}
-                            </span>
-                            <span class="badge">{{ category | last | size }}</span>
-                        </a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <!-- 其他div框放到这里 -->
-            <div class="side">
-                <div>
-                    <i class="fa-solid fa-tags"></i>
-                    Tags
-                </div>
-                <div class="tags-cloud">
-                    {% assign first = site.tags.first %}
-                    {% assign max = first[1].size %}
-                    {% assign min = max %}
-                    {% for tag in site.tags offset:1 %}
-                      {% if tag[1].size > max %}
-                        {% assign max = tag[1].size %}
-                      {% elsif tag[1].size < min %}
-                        {% assign min = tag[1].size %}
-                      {% endif %}
-                    {% endfor %}
-
-                    {% if max == min %}
-                        {% assign diff = 1 %}
-                    {% else %}
-                        {% assign diff = max | minus: min %}
-                    {% endif %}
-
-                    {% for tag in site.tags %}
-                      {% assign temp = tag[1].size | minus: min | times: 36 | divided_by: diff %}
-                      {% assign base = temp | divided_by: 4 %}
-                      {% assign remain = temp | modulo: 4 %}
-                      {% if remain == 0 %}
-                        {% assign size = base | plus: 9 %}
-                      {% elsif remain == 1 or remain == 2 %}
-                        {% assign size = base | plus: 9 | append: '.5' %}
-                      {% else %}
-                        {% assign size = base | plus: 10 %}
-                      {% endif %}
-                      {% if remain == 0 or remain == 1 %}
-                        {% assign color = 9 | minus: base %}
-                      {% else %}
-                        {% assign color = 8 | minus: base %}
-                      {% endif %}
-                      <a href="{{ root_url }}/{{ site.tag_dir }}#{{ tag[0] }}" style="font-size: {{ size }}pt; color: #{{ color }}{{ color }}{{ color }};">{{ tag[0] }}</a>
-                    {% endfor %}
-                </div>
-            </div>
-
-            <!-- <div class="side">
-                <div>
-                    <i class="fa fa-external-link"></i>
-                    Links
-                </div>
-                <ul  class="content-ul">
-
-                </ul>
-            </div> -->
-        </div>
+<!-- Value Props -->
+<section class="features" id="features">
+  <h2 class="section-title">为什么选择 373Kice</h2>
+  <div class="feature-grid">
+    <div class="feature-card">
+      <div class="feature-icon">&#9881;</div>
+      <h3>多 AI 辩论</h3>
+      <p>12 位分析师分别从技术面、基本面、舆情、情绪独立分析，激进派 vs 保守派正面交锋——你能看到市场的多空分歧，而不是一家之言。</p>
     </div>
-</div>
+    <div class="feature-card">
+      <div class="feature-icon">&#9878;</div>
+      <h3>四维框架</h3>
+      <p>技术面 + 基本面 + 舆情面 + 情绪面——四维交叉验证，不是单维度数据罗列，而是综合分析后的一致判断。</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">&#9879;</div>
+      <h3>明确决策</h3>
+      <p>每篇报告结尾给出明确的 BUY / SELL / HOLD 决策 + 置信度百分比 + 0-10 风险评分——不需要你猜结论。</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">&#9880;</div>
+      <h3>完全透明</h3>
+      <p>公开所有分析逻辑、数据来源、AI 推理过程。即使它不完美，至少你知道它是怎么得出结论的。零利益冲突。</p>
+    </div>
+  </div>
+</section>
+
+<!-- How It Works -->
+<section class="method" id="method">
+  <h2 class="section-title">分析方法论</h2>
+  <div class="method-flow">
+    <div class="method-step">
+      <div class="step-number">1</div>
+      <h4>数据采集</h4>
+      <p>实时拉取 A 股行情、财报、资金流向、新闻舆情、市场情绪数据</p>
+    </div>
+    <div class="method-arrow">&#8594;</div>
+    <div class="method-step">
+      <div class="step-number">2</div>
+      <h4>多维度分析</h4>
+      <p>12 个 AI 分析师从技术/基本面/舆情/情绪四维度独立分析</p>
+    </div>
+    <div class="method-arrow">&#8594;</div>
+    <div class="method-step">
+      <div class="step-number">3</div>
+      <h4>多空辩论</h4>
+      <p>激进派 vs 保守派 vs 中性派——AI 之间互相质疑、反驳、修正</p>
+    </div>
+    <div class="method-arrow">&#8594;</div>
+    <div class="method-step">
+      <div class="step-number">4</div>
+      <h4>共识决策</h4>
+      <p>产出 BUY/SELL/HOLD + 置信度 + 风险评分 + 可执行操作计划</p>
+    </div>
+  </div>
+</section>
+
+<!-- Latest Reports -->
+<section class="latest" id="latest">
+  <h2 class="section-title">最新分析报告</h2>
+  <div class="post-grid">
+    {% for post in site.posts limit: 6 %}
+    <article class="post-card">
+      <div class="post-meta">
+        <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+        {% if post.categories %}
+        <span class="post-category">{{ post.categories | first }}</span>
+        {% endif %}
+      </div>
+      <h3 class="post-title">
+        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </h3>
+      <p class="post-excerpt">{{ post.brief_intro | default: post.excerpt | strip_html | truncate: 120 }}</p>
+      <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">阅读全文 &#8594;</a>
+    </article>
+    {% endfor %}
+  </div>
+  {% if site.posts.size > 6 %}
+  <div class="view-all">
+    <a href="{{ site.baseurl }}/archive/" class="btn-secondary">查看全部报告 ({{ site.posts.size }} 篇)</a>
+  </div>
+  {% endif %}
+</section>
+
+<!-- CTA -->
+<section class="subscribe" id="subscribe">
+  <h2 class="section-title">保持关注</h2>
+  <p>每周获取最新的 AI 辩论式 A 股投资决策报告，不收一分钱。</p>
+  <div class="subscribe-links">
+    <a href="{{ site.baseurl }}/feed.xml" class="btn-rss" target="_blank">RSS 订阅</a>
+    <a href="https://github.com/373Kice/373Kice.github.io" class="btn-github" target="_blank">GitHub</a>
+  </div>
+</section>
+
+<!-- Disclaimer -->
+<section class="disclaimer">
+  <p>⚠️ 本站所有内容由 AI 系统自动生成，仅供学习研究参考，<strong>不构成任何投资建议</strong>。投资有风险，入市需谨慎。</p>
+</section>

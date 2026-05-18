@@ -54,6 +54,9 @@ kramdown:
 category_dir: category/
 tag_dir: tag/
 
+# Allow posts with future dates (daily reports may be same-day)
+future: true
+
 # excerpt
 excerpt_separator: "\n\n\n\n"
 
