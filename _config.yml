@@ -34,11 +34,9 @@ dribbble_username:
 description_footer: AI辩论式投资决策报告 · 透明 · 可追溯 · 零利益冲突
 
 # comments
-# two ways to comment, only choose one, and use your own short name
-# 两种评论插件，选一个就好了，使用自己的 short_name
-# 来必力
+# 迁移到 Giscus（GitHub Discussions 驱动）
 # duoshuo_shortname: #hygblog
-disqus_shortname: 373Kice
+disqus_shortname:
 # City_uid: MTAyMC80NTEwOS8yMTYyNg==
 
 # statistic analysis 统计代码
@@ -131,13 +129,8 @@ exclude:
   - "analyze_rare_earth_realtime.py"
   - "analyze_rare_earth_stocks.py"
 
-# Giscus 评论系统配置
-# 使用说明：
-# 1. 在仓库 Settings -> General -> Features 中开启 Discussions
-# 2. 在 Discussions 中创建一个分类（如 "Comments"）
-# 3. 访问 https://giscus.app/zh-CN 获取 repo-id 和 category-id
-# 4. 填入下方对应字段，取消注释即可启用
-# giscus_repo: "373Kice/373Kice.github.io"
-# giscus_repo_id: "YOUR_REPO_ID"
-# giscus_category: "Comments"
-# giscus_category_id: "YOUR_CATEGORY_ID"
+# Giscus 评论系统配置（启用）
+giscus_repo: "373Kice/373Kice.github.io"
+giscus_repo_id: "MDEwOlJlcG9zaXRvcnkxNjU4MzM4NTU="
+giscus_category: "Announcements"
+giscus_category_id: "DIC_kwDOCeJsf84C9YEn"

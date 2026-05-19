@@ -1,0 +1,27 @@
+{
+  "name": "373Kice · AI投资决策报告",
+  "short_name": "373Kice",
+  "description": "AI多智能体辩论式A股投资决策报告平台，提供带置信度的BUY/SELL/HOLD建议与综合风险评分",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["finance", "investment", "news"],
+  "lang": "zh-CN",
+  "dir": "ltr"
+}

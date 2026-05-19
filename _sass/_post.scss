@@ -202,7 +202,8 @@
 @media screen and (max-width: 770px) {
     .page[post] {
         .left {
-            font-size: 15px;
+            font-size: 16px;
+            line-height: 1.8;
             h2 {
                 font-size: 22px;
             }
@@ -221,14 +222,65 @@
             article {
                 h2 {
                     font-size: 22px;
+                    margin-top: 28px;
                 }
                 h3 {
                     font-size: 19px;
+                    margin-top: 24px;
+                }
+                p {
+                    margin-bottom: 18px;
+                    line-height: 1.8;
+                }
+                img {
+                    margin: 4px 0;
                 }
             }
         }
         .label {
             gap: 6px 10px;
+        }
+    }
+}
+
+// ---- Mobile: small screens (< 480px) ----
+@media screen and (max-width: 480px) {
+    .page[post] {
+        .left {
+            padding: 16px 14px;
+            font-size: 16px;
+            article {
+                h2 {
+                    font-size: 20px;
+                    margin-top: 24px;
+                }
+                h3 {
+                    font-size: 18px;
+                    margin-top: 20px;
+                }
+                h4 {
+                    font-size: 16px;
+                }
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+        // Responsive tables: wrap in horizontal scroll
+        table {
+            font-size: 13px;
+            display: block;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            th, td {
+                padding: 8px 10px;
+                white-space: nowrap;
+            }
+        }
+        blockquote {
+            padding: 10px 14px;
+            margin-left: 0;
+            margin-right: 0;
         }
     }
 }

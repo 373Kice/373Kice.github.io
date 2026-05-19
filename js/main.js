@@ -28,6 +28,36 @@
   }
 }());
 
+//////////////////////////dark mode toggle////////////////////////////
+(function() {
+  var toggle = document.querySelector('#darkModeToggle')
+  var icon = toggle ? toggle.querySelector('i') : null
+  if (!toggle) return
+
+  // 读取已保存的主题偏好
+  var savedTheme = localStorage.getItem('theme')
+  var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+
+  if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (icon) { icon.className = 'fa-solid fa-sun' }
+  }
+
+  toggle.onclick = function() {
+    var html = document.documentElement
+    var isDark = html.getAttribute('data-theme') === 'dark'
+    if (isDark) {
+      html.removeAttribute('data-theme')
+      localStorage.setItem('theme', 'light')
+      if (icon) { icon.className = 'fa-regular fa-moon' }
+    } else {
+      html.setAttribute('data-theme', 'dark')
+      localStorage.setItem('theme', 'dark')
+      if (icon) { icon.className = 'fa-solid fa-sun' }
+    }
+  }
+}());
+
 //////////////////////////back to top////////////////////////////
 (function() {
   var backToTop = document.querySelector('.back-to-top')
