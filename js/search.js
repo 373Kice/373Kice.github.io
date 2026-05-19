@@ -120,7 +120,10 @@
   // 点击外部关闭
   document.addEventListener('click', function(e) {
     var container = document.querySelector('.search-container')
-    if (container && !container.contains(e.target)) {
+    var toggle = document.querySelector('#searchToggle')
+    if (!container || container.classList.contains('search-open') === false) return
+    if (toggle && toggle.contains(e.target)) return
+    if (!container.contains(e.target)) {
       closeSearch()
     }
   })

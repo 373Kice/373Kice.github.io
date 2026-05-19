@@ -681,17 +681,9 @@ header {
     background: var(--scrollbar-thumb);
 }
 
-// Dark mode toggle button
-.dark-mode-toggle {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 60px;
+// Mobile actions & toggle buttons
+.mobile-actions button {
     color: var(--text-muted);
-    cursor: pointer;
-    font-size: 16px;
-    transition: color 0.2s ease;
     &:hover {
         color: var(--link-color);
     }

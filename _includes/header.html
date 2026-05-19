@@ -10,15 +10,19 @@
         <div id="search-results" class="search-results"></div>
     </div>
     <div class="wrapper">
-        <a href="{{ site.baseurl }}/" class="brand">{{ site.title }}</a>
-        <small>{{site.brief-intro}}</small>
+        <div class="header-left">
+            <a href="{{ site.baseurl }}/" class="brand">{{ site.title }}</a>
+            <small>{{site.brief-intro}}</small>
+        </div>
         <button id="headerMenu" class="menu"><i class="fa-solid fa-bars"></i></button>
-        <button id="darkModeToggle" class="dark-mode-toggle" title="切换暗色模式" aria-label="切换暗色模式">
-            <i class="fa-regular fa-moon"></i>
-        </button>
-        <button id="searchToggle" class="search-toggle" title="搜索" aria-label="搜索">
-            <i class="fa-solid fa-search"></i>
-        </button>
+        <div class="mobile-actions" id="mobileActions">
+            <button id="darkModeToggle" class="dark-mode-toggle" title="切换暗色模式" aria-label="切换暗色模式">
+                <i class="fa-regular fa-moon"></i>
+            </button>
+            <button id="searchToggle" class="search-toggle" title="搜索" aria-label="搜索">
+                <i class="fa-solid fa-search"></i>
+            </button>
+        </div>
         <nav id="headerNav">
             <ul>
                 <li>

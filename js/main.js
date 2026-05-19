@@ -52,7 +52,7 @@
   }
 
   searchToggle.addEventListener('click', function(e) {
-    e.stopPropagation()
+    e.stopPropagation()           // ← 阻止冒泡，避免被 document click 关闭
     if (searchContainer.classList.contains('search-open')) {
       closeSearch()
     } else {
