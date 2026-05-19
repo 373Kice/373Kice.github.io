@@ -6,6 +6,11 @@ categories: A股分析
 tags: [A股, 大盘分析, 每日报告]
 author: 373Kice AI 分析系统
 brief_intro: "{120字以内摘要：今日指数表现+领涨领跌板块+AI决策结论}"
+decision: HOLD     # BUY / SELL / HOLD
+confidence: 65      # 置信度百分比
+risk_score: 6.2     # 综合风险评分 0-10
+target_index: 上证指数
+target_level: 4,131 # 目标指数当前点位
 ---
 
 > 本文由 373Kice 多智能体 AI 分析系统自动生成，仅供学习研究参考，**不构成任何投资建议**。

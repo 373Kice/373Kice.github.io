@@ -1,10 +1,23 @@
 <header id="top">
+    <div class="search-container" id="searchContainer">
+        <div class="search-inner">
+            <i class="fa-solid fa-search search-icon"></i>
+            <input type="text" id="search-input" placeholder="搜索报告..." autocomplete="off">
+            <button id="searchClose" class="search-close" aria-label="关闭搜索">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div id="search-results" class="search-results"></div>
+    </div>
     <div class="wrapper">
         <a href="{{ site.baseurl }}/" class="brand">{{ site.title }}</a>
         <small>{{site.brief-intro}}</small>
         <button id="headerMenu" class="menu"><i class="fa-solid fa-bars"></i></button>
         <button id="darkModeToggle" class="dark-mode-toggle" title="切换暗色模式" aria-label="切换暗色模式">
             <i class="fa-regular fa-moon"></i>
+        </button>
+        <button id="searchToggle" class="search-toggle" title="搜索" aria-label="搜索">
+            <i class="fa-solid fa-search"></i>
         </button>
         <nav id="headerNav">
             <ul>

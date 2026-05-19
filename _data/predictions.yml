@@ -1,0 +1,39 @@
+# 373Kice 历史预测追踪
+# 每次生成报告后更新此文件
+# actual_result: pending (待实际走势验证), hit (预测正确), miss (预测偏差)
+
+- date: 2026-05-16
+  title: "全球市场周报 (5/12-5/16)"
+  url: /2026/05/16/全球市场周报-0512-0516/
+  decision: SELL
+  confidence: 70
+  risk_score: 7.4
+  target_index: 上证指数
+  target_level: 4,135
+  actual_result: pending
+  actual_change: null
+  note: "战略性减仓+对冲，上证PE历史分位99.67%，两融超2015年峰值27%"
+
+- date: 2026-05-18
+  title: "A 股大盘分析报告 (5/18)"
+  url: /2026/05/18/A股大盘分析报告/
+  decision: HOLD
+  confidence: 65
+  risk_score: 6.2
+  target_index: 上证指数
+  target_level: 4,131
+  actual_result: pending
+  actual_change: null
+  note: "缩量震荡三大指数微跌，科创50逆势+0.81%"
+
+- date: 2026-05-19
+  title: "A 股大盘分析报告 (5/19)"
+  url: /2026/05/19/A股大盘分析报告/
+  decision: HOLD
+  confidence: 60
+  risk_score: 6.5
+  target_index: 上证指数
+  target_level: 4,137
+  actual_result: pending
+  actual_change: null
+  note: "极度分化，科创50+1.32% vs 创业板-0.98%，新增美债5.15%风险变量"

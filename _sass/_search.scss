@@ -1,0 +1,210 @@
+// ============================================================
+// 搜索功能样式
+// ============================================================
+
+// ---- Search Container (overlay at top of header) ----
+.search-container {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    background: var(--bg-header, #ffffff);
+    border-bottom: 1px solid var(--border-color, #e5e7eb);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    padding: 12px 0;
+}
+
+.search-container.search-open {
+    display: block;
+}
+
+.search-inner {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 24px;
+}
+
+.search-icon {
+    color: var(--text-light, #9ca3af);
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+#search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 18px;
+    color: var(--text-primary, #111827);
+    padding: 10px 0;
+    font-family: inherit;
+    &::placeholder {
+        color: var(--text-light, #9ca3af);
+    }
+}
+
+.search-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    color: var(--text-muted, #6b7280);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    flex-shrink: 0;
+    &:hover {
+        background: var(--bg-tag, #f1f5f9);
+        color: var(--text-primary, #111827);
+    }
+    i {
+        font-size: 20px;
+    }
+}
+
+// ---- Search Toggle Button in Header ----
+.search-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 60px;
+    color: var(--text-muted, #6b7280);
+    cursor: pointer;
+    font-size: 16px;
+    transition: color 0.2s ease;
+    border: none;
+    background: none;
+    flex-shrink: 0;
+    &:hover {
+        color: var(--link-color, #2563eb);
+    }
+}
+
+// ---- Search Results Dropdown ----
+.search-results {
+    display: none;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 24px;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.search-results.search-active {
+    display: block;
+}
+
+.search-result-list {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0;
+}
+
+.search-result-item {
+    display: block;
+    padding: 14px 16px;
+    margin: 0 -16px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.15s ease;
+    &:hover {
+        background: var(--bg-tag, #f1f5f9);
+    }
+}
+
+.search-result-title {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-heading, #111827);
+    margin-bottom: 4px;
+    line-height: 1.4;
+    mark {
+        background: #fef08a;
+        color: inherit;
+        padding: 0 2px;
+        border-radius: 2px;
+    }
+}
+
+.search-result-date {
+    display: block;
+    font-size: 12px;
+    color: var(--text-light, #9ca3af);
+    margin-bottom: 6px;
+}
+
+.search-result-excerpt {
+    display: block;
+    font-size: 13px;
+    color: var(--text-muted, #6b7280);
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    mark {
+        background: #fef08a;
+        color: inherit;
+        padding: 0 2px;
+        border-radius: 2px;
+    }
+}
+
+.search-empty {
+    text-align: center;
+    padding: 32px 16px;
+    color: var(--text-light, #9ca3af);
+    font-size: 14px;
+}
+
+.search-more {
+    text-align: center;
+    padding: 12px;
+    font-size: 13px;
+    color: var(--text-muted, #6b7280);
+}
+
+// ---- Mobile ----
+@media screen and (max-width: 770px) {
+    .search-inner {
+        padding: 0 16px;
+    }
+    .search-results {
+        padding: 0 16px;
+    }
+    #search-input {
+        font-size: 16px;
+    }
+    .search-result-item {
+        padding: 12px 12px;
+        margin: 0 -12px;
+    }
+}
+
+// ---- Dark mode: search highlight ----
+[data-theme="dark"] {
+    .search-result-title mark,
+    .search-result-excerpt mark {
+        background: #854d0e;
+        color: #fef9c3;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .search-result-title mark,
+    .search-result-excerpt mark {
+        background: #854d0e;
+        color: #fef9c3;
+    }
+}

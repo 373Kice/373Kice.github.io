@@ -28,6 +28,57 @@
   }
 }());
 
+//////////////////////////search toggle////////////////////////////
+(function() {
+  var searchToggle = document.querySelector('#searchToggle')
+  var searchContainer = document.querySelector('#searchContainer')
+  var searchInput = document.querySelector('#search-input')
+  var searchClose = document.querySelector('#searchClose')
+  if (!searchToggle || !searchContainer) return
+
+  function openSearch() {
+    searchContainer.classList.add('search-open')
+    setTimeout(function() { searchInput.focus() }, 100)
+  }
+
+  function closeSearch() {
+    searchContainer.classList.remove('search-open')
+    if (searchInput) searchInput.value = ''
+    var results = document.querySelector('#search-results')
+    if (results) {
+      results.innerHTML = ''
+      results.classList.remove('search-active')
+    }
+  }
+
+  searchToggle.addEventListener('click', function(e) {
+    e.stopPropagation()
+    if (searchContainer.classList.contains('search-open')) {
+      closeSearch()
+    } else {
+      openSearch()
+    }
+  })
+
+  if (searchClose) {
+    searchClose.addEventListener('click', closeSearch)
+  }
+
+  // 按 / 键打开搜索
+  document.addEventListener('keydown', function(e) {
+    if (e.key === '/' && !e.ctrlKey && !e.metaKey) {
+      var tag = document.activeElement ? document.activeElement.tagName : ''
+      if (tag !== 'INPUT' && tag !== 'TEXTAREA') {
+        e.preventDefault()
+        openSearch()
+      }
+    }
+    if (e.key === 'Escape') {
+      closeSearch()
+    }
+  })
+}());
+
 //////////////////////////dark mode toggle////////////////////////////
 (function() {
   var toggle = document.querySelector('#darkModeToggle')
