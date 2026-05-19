@@ -84,6 +84,121 @@
         }
     }
 }
+
+// ---- Post-bottom Subscribe CTA ----
+.post-subscribe-cta {
+    margin: 40px 0 32px;
+}
+.post-subscribe-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 28px 32px;
+    background: linear-gradient(135deg, #eff6ff 0%, #f0f9ff 50%, #ecfdf5 100%);
+    border: 1px solid #bfdbfe;
+    border-radius: 14px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+.post-subscribe-icon {
+    font-size: 36px;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+.post-subscribe-body {
+    flex: 1;
+    min-width: 0;
+    h3 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #1e3a5f;
+        margin: 0 0 6px;
+    }
+    > p {
+        font-size: 14px;
+        color: #4b5563;
+        margin: 0 0 16px;
+        line-height: 1.5;
+    }
+    form {
+        display: flex;
+        gap: 10px;
+        max-width: 480px;
+    }
+    input[type="email"] {
+        flex: 1;
+        min-width: 0;
+        padding: 11px 16px;
+        border: 2px solid #bfdbfe;
+        border-radius: 8px;
+        font-size: 14px;
+        outline: none;
+        background: #fff;
+        transition: border-color 0.25s ease, box-shadow 0.25s ease;
+        &:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+        }
+    }
+    button[type="submit"] {
+        padding: 11px 24px;
+        background: #2563eb;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        white-space: nowrap;
+        transition: all 0.25s ease;
+        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.28);
+        &:hover {
+            background: #1d4ed8;
+            box-shadow: 0 6px 18px rgba(37, 99, 235, 0.38);
+            transform: translateY(-1px);
+        }
+    }
+}
+.post-subscribe-note {
+    font-size: 12px;
+    color: #9ca3af;
+    margin: 10px 0 0;
+}
+.post-subscribe-rss {
+    font-size: 13px;
+    margin: 8px 0 0;
+    a {
+        color: #6b7280;
+        text-decoration: none;
+        transition: color 0.2s ease;
+        &:hover {
+            color: #2563eb;
+            background: none;
+        }
+    }
+}
+
+// ---- Mobile ----
+@media screen and (max-width: 770px) {
+    .post-subscribe-card {
+        flex-direction: column;
+        gap: 12px;
+        padding: 22px 18px;
+    }
+    .post-subscribe-body {
+        form {
+            flex-direction: column;
+            gap: 8px;
+        }
+        button[type="submit"] {
+            width: 100%;
+        }
+        h3 {
+            font-size: 16px;
+        }
+    }
+}
+
 @media screen and (max-width: 770px) {
     .page[post] {
         .left {
