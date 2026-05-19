@@ -123,3 +123,4 @@ venv.bak/
 .mypy_cache/
 .jekyll-cache
 .workbuddy/
+.playwright-cli/
