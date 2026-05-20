@@ -37,3 +37,15 @@
   actual_result: pending
   actual_change: null
   note: "极度分化，科创50+1.32% vs 创业板-0.98%，新增美债5.15%风险变量"
+
+- date: 2026-05-20
+  title: "A 股大盘分析报告 (5/20)"
+  url: /2026/05/20/A股大盘分析报告/
+  decision: HOLD
+  confidence: 58
+  risk_score: 6.8
+  target_index: 上证指数
+  target_level: 4,162
+  actual_result: pending
+  actual_change: null
+  note: "科创50暴涨3.2%创年内新高但68%个股下跌，半导体+4.17%独舞，电力一日游-3.88%"
