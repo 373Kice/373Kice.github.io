@@ -28,22 +28,64 @@
   }
 }());
 
+//////////////////////////dark mode toggle////////////////////////////
+(function() {
+  // 绑定所有 .header-icon-btn 中的暗色模式按钮（桌面 + 移动）
+  var toggles = document.querySelectorAll('#darkModeToggle, #darkModeToggleMob')
+  if (toggles.length === 0) return
+
+  var savedTheme = localStorage.getItem('theme')
+  var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+
+  if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    toggles.forEach(function(btn) {
+      var icon = btn.querySelector('i')
+      if (icon) { icon.className = 'fa-solid fa-sun' }
+    })
+  }
+
+  toggles.forEach(function(toggle) {
+    toggle.onclick = function() {
+      var html = document.documentElement
+      var isDark = html.getAttribute('data-theme') === 'dark'
+      if (isDark) {
+        html.removeAttribute('data-theme')
+        localStorage.setItem('theme', 'light')
+        toggles.forEach(function(btn) {
+          var icon = btn.querySelector('i')
+          if (icon) { icon.className = 'fa-regular fa-moon' }
+        })
+      } else {
+        html.setAttribute('data-theme', 'dark')
+        localStorage.setItem('theme', 'dark')
+        toggles.forEach(function(btn) {
+          var icon = btn.querySelector('i')
+          if (icon) { icon.className = 'fa-solid fa-sun' }
+        })
+      }
+    }
+  })
+}());
+
 //////////////////////////search toggle////////////////////////////
 (function() {
-  var searchToggle = document.querySelector('#searchToggle')
+  var searchToggles = document.querySelectorAll('#searchToggle, #searchToggleMob')
   var searchContainer = document.querySelector('#searchContainer')
   var searchInput = document.querySelector('#search-input')
   var searchClose = document.querySelector('#searchClose')
-  if (!searchToggle || !searchContainer) return
+  if (searchToggles.length === 0 || !searchContainer) return
 
   function openSearch() {
     searchContainer.classList.add('search-open')
     setTimeout(function() { searchInput.focus() }, 100)
   }
 
-  function closeSearch() {
+  function closeSearch(resetInput) {
     searchContainer.classList.remove('search-open')
-    if (searchInput) searchInput.value = ''
+    if (resetInput !== false && searchInput) {
+      searchInput.value = ''
+    }
     var results = document.querySelector('#search-results')
     if (results) {
       results.innerHTML = ''
@@ -51,17 +93,22 @@
     }
   }
 
-  searchToggle.addEventListener('click', function(e) {
-    e.stopPropagation()           // ← 阻止冒泡，避免被 document click 关闭
-    if (searchContainer.classList.contains('search-open')) {
-      closeSearch()
-    } else {
-      openSearch()
-    }
+  searchToggles.forEach(function(toggle) {
+    toggle.addEventListener('click', function(e) {
+      e.stopPropagation()
+      if (searchContainer.classList.contains('search-open')) {
+        closeSearch()
+      } else {
+        openSearch()
+      }
+    })
   })
 
   if (searchClose) {
-    searchClose.addEventListener('click', closeSearch)
+    searchClose.addEventListener('click', function(e) {
+      e.stopPropagation()
+      closeSearch()
+    })
   }
 
   // 按 / 键打开搜索
@@ -79,57 +126,17 @@
   })
 }());
 
-//////////////////////////dark mode toggle////////////////////////////
-(function() {
-  var toggle = document.querySelector('#darkModeToggle')
-  var icon = toggle ? toggle.querySelector('i') : null
-  if (!toggle) return
-
-  // 读取已保存的主题偏好
-  var savedTheme = localStorage.getItem('theme')
-  var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-
-  if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-    document.documentElement.setAttribute('data-theme', 'dark')
-    if (icon) { icon.className = 'fa-solid fa-sun' }
-  }
-
-  toggle.onclick = function() {
-    var html = document.documentElement
-    var isDark = html.getAttribute('data-theme') === 'dark'
-    if (isDark) {
-      html.removeAttribute('data-theme')
-      localStorage.setItem('theme', 'light')
-      if (icon) { icon.className = 'fa-regular fa-moon' }
-    } else {
-      html.setAttribute('data-theme', 'dark')
-      localStorage.setItem('theme', 'dark')
-      if (icon) { icon.className = 'fa-solid fa-sun' }
-    }
-  }
-}());
-
 //////////////////////////back to top////////////////////////////
 (function() {
   var backToTop = document.querySelector('.back-to-top')
-  var backToTopA = document.querySelector('.back-to-top a')
-  // console.log(backToTop);
   window.addEventListener('scroll', function() {
-
-    // 页面顶部滚进去的距离
     var scrollTop = Math.max(document.documentElement.scrollTop, document.body.scrollTop)
-
     if (scrollTop > 200) {
       backToTop.classList.add('back-to-top-show')
     } else {
       backToTop.classList.remove('back-to-top-show')
     }
   })
-
-  // backToTopA.addEventListener('click',function (e) {
-  //     e.preventDefault()
-  //     window.scrollTo(0,0)
-  // })
 }());
 
 //////////////////////////hover on demo//////////////////////////////

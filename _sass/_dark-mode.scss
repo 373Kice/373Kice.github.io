@@ -681,8 +681,9 @@ header {
     background: var(--scrollbar-thumb);
 }
 
-// Mobile actions & toggle buttons
-.mobile-actions button {
+// Toggle buttons (header icon buttons + mobile icons)
+.mobile-header-icons button,
+nav ul li.nav-icon button.header-icon-btn {
     color: var(--text-muted);
     &:hover {
         color: var(--link-color);
