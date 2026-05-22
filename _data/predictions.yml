@@ -49,3 +49,27 @@
   actual_result: pending
   actual_change: null
   note: "科创50暴涨3.2%创年内新高但68%个股下跌，半导体+4.17%独舞，电力一日游-3.88%"
+
+- date: 2026-05-21
+  title: "A 股大盘分析报告 (5/21)"
+  url: /2026/05/21/A股大盘分析报告/
+  decision: SELL
+  confidence: 65
+  risk_score: 7.8
+  target_index: 上证指数
+  target_level: 4,077
+  actual_result: pending
+  actual_change: null
+  note: "黑色星期四！上证单日暴跌-2.04%，大阴线击穿MA5/MA10/MA20三道均线，放量1.59万亿恐慌抛售"
+
+- date: 2026-05-22
+  title: "A 股大盘分析报告 (5/22)"
+  url: /2026/05/22/A股大盘分析报告/
+  decision: HOLD
+  confidence: 55
+  risk_score: 6.5
+  target_index: 上证指数
+  target_level: 4,108
+  actual_result: pending
+  actual_change: null
+  note: "大跌后强反弹日，深成指+2.06%创业板+2.57%领涨，元件+9.43%成新主线，但成交缩量至1.10万亿"
