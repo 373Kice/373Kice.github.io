@@ -82,6 +82,18 @@
   risk_score: 6.0
   target_index: 上证指数
   target_level: 4,153
+  actual_result: miss
+  actual_change: -2.3%
+  note: "科创50飙涨5.88%创收盘历史新高至1896点，但此后8个交易日上证从4153跌至4058，BUY信号出现在短期顶点"
+
+- date: 2026-06-04
+  title: "A 股大盘分析报告 (6/4)"
+  url: /2026/06/04/A股大盘分析报告/
+  decision: HOLD
+  confidence: 55
+  risk_score: 7.0
+  target_index: 上证指数
+  target_level: 4,058
   actual_result: pending
   actual_change: null
-  note: "科创50飙涨5.88%创收盘历史新高至1896点，三连阳收复4150，MLF 6000亿落地，盘中成交突破2.5万亿放量上攻"
+  note: "8日阴跌后上证失守4100至4058，科创50自1896历史高点回落8.3%，WTI原油暴跌4%+美国通胀股债双杀，AI赛道拥挤讨论升温"
