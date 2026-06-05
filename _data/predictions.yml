@@ -97,3 +97,15 @@
   actual_result: pending
   actual_change: null
   note: "8日阴跌后上证失守4100至4058，科创50自1896历史高点回落8.3%，WTI原油暴跌4%+美国通胀股债双杀，AI赛道拥挤讨论升温"
+
+- date: 2026-06-05
+  title: "A 股大盘分析报告 (6/5)"
+  url: /2026/06/05/A股大盘分析报告/
+  decision: SELL
+  confidence: 65
+  risk_score: 8.2
+  target_index: 上证指数
+  target_level: 4,028
+  actual_result: pending
+  actual_change: null
+  note: "科创50暴跌-4.01%创调整新低至1668，自历史高点1896回撤12%。创业板-3.2%，深成指-2.21%。美国5月非农17.2万超预期，加息预期骤升。TMT深幅回调，上证跌破半年线"
