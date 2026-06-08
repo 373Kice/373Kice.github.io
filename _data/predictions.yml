@@ -109,3 +109,15 @@
   actual_result: pending
   actual_change: null
   note: "科创50暴跌-4.01%创调整新低至1668，自历史高点1896回撤12%。创业板-3.2%，深成指-2.21%。美国5月非农17.2万超预期，加息预期骤升。TMT深幅回调，上证跌破半年线"
+
+- date: 2026-06-08
+  title: "A 股大盘分析报告 (6/8)"
+  url: /2026/06/08/A股大盘分析报告/
+  decision: SELL
+  confidence: 70
+  risk_score: 8.5
+  target_index: 上证指数
+  target_level: 3,959
+  actual_result: pending
+  actual_change: null
+  note: "沪指暴跌-1.7%失守4000点至3959，科创50续跌-4.3%至1596，自历史高点回撤15.8%。全市场超4500股收绿，美联储加息预期+外围暴跌拖累，仅机器人概念逆市"
