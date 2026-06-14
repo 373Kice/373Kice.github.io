@@ -133,3 +133,15 @@
   actual_result: pending
   actual_change: null
   note: "沪指绝地反弹+1.28%收复4000至4010，创业板+3.93%科创50+4.17%科技股全线反攻。5月出口增速19.4%超预期催化。但成交缩至1.17万亿为10日最低，缩量反弹持续性存疑"
+
+- date: 2026-06-12
+  title: "A 股大盘分析报告 (6/12)"
+  url: /2026/06/12/A股大盘分析报告/
+  decision: HOLD
+  confidence: 62
+  risk_score: 5.8
+  target_index: 上证指数
+  target_level: 4,032
+  actual_result: pending
+  actual_change: null
+  note: "放量反弹+1.12%至4032，成交1.537万亿创10日新高，3900+股上涨。银行/非银接棒领涨，科技股退潮（传媒-5.12%/计算机-4.88%）。美联储议息在即，风格切换信号明显"
