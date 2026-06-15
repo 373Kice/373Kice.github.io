@@ -145,3 +145,15 @@
   actual_result: pending
   actual_change: null
   note: "放量反弹+1.12%至4032，成交1.537万亿创10日新高，3900+股上涨。银行/非银接棒领涨，科技股退潮（传媒-5.12%/计算机-4.88%）。美联储议息在即，风格切换信号明显"
+
+- date: 2026-06-15
+  title: "A 股大盘分析报告 (6/15)"
+  url: /2026/06/15/A股大盘分析报告/
+  decision: BUY
+  confidence: 60
+  risk_score: 6.5
+  target_index: 上证指数
+  target_level: 4,096
+  actual_result: pending
+  actual_change: null
+  note: "美伊协议引爆全球股市！上证+1.61%至4097六连阳，创业板+5.30%科创50+5.12%，CPO/PCB/黄金/小金属集体爆发，成交1.40万亿。本周超级央行周美联储决议在即"
