@@ -169,3 +169,15 @@
   actual_result: pending
   actual_change: null
   note: "6连阳后首收十字星微跌0.11%至4092，创业板逆势+1.72%深强沪弱极致分化。布油暴跌5%跌破$80，特朗普宣布霍尔木兹海峡周五重开。超级央行周开启，成交缩至1.37万亿"
+
+- date: 2026-06-17
+  title: "A 股大盘分析报告 (6/17)"
+  url: /2026/06/17/A股大盘分析报告/
+  decision: HOLD
+  confidence: 58
+  risk_score: 5.8
+  target_index: 上证指数
+  target_level: 4,108
+  actual_result: pending
+  actual_change: null
+  note: "上证+0.40%收复4100至4108，科创50暴涨4.69%至1841，创业板+1.56%。陆家嘴论坛一行一局一会金融开放重磅信号，QDII扩容+离岸金融方案。今晚美联储决议。成交1.40万亿温和放量，科技成长主导"
