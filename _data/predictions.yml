@@ -253,3 +253,63 @@
   actual_result: pending
   actual_change: null
   note: "大跌次日缩量弱反弹。上证+0.37%收4044险守4000，深成指+0.64%/沪深300+0.62%相对强势，但科创50-0.59%仍承压。全市场成交3.18万亿较昨日缩量约2700亿。机器人/汽车零部件/贵金属领涨，半导体继续休整。7/2 SELL(72%)信号后未继续杀跌，短线进入弱修复但均线空头+MACD绿柱扩大，持续性存疑"
+
+- date: 2026-07-06
+  title: "A 股大盘分析报告 (7/6)"
+  url: /2026/07/06/A股大盘分析报告/
+  decision: HOLD
+  confidence: 56
+  risk_score: 6.5
+  target_index: 上证指数
+  target_level: 4,041
+  actual_result: pending
+  actual_change: null
+  note: "节后首日缩量震荡。上证-0.06%收4041近乎平收，深成指-1.16%/创业板-1.77%补跌，科创50逆势+1.04%止跌。成交3.09万亿较7/3缩量约900亿。大跌后弱势整理，硬科技初现企稳信号，未达BUY/SELL阈值维持HOLD"
+
+- date: 2026-07-07
+  title: "A 股大盘分析报告 (7/7)"
+  url: /2026/07/07/A股大盘分析报告/
+  decision: HOLD
+  confidence: 55
+  risk_score: 6.8
+  target_index: 上证指数
+  target_level: 3,990
+  actual_result: pending
+  actual_change: null
+  note: "上证-1.26%收3990失守4000关口，深成指-1.24%/创业板-0.94%同步走弱，科创50微涨+0.28%。成交2.58万亿继续缩量。普跌格局但未达-1.5%系统性阈值，维持HOLD，风险较前两日抬升"
+
+- date: 2026-07-08
+  title: "A 股大盘分析报告 (7/8)"
+  url: /2026/07/08/A股大盘分析报告/
+  decision: HOLD
+  confidence: 56
+  risk_score: 6.3
+  target_index: 上证指数
+  target_level: 3,971
+  actual_result: pending
+  actual_change: null
+  note: "地量磨底。上证-0.49%收3971跌幅收窄，深成指-1.87%/创业板-1.70%再创新低，科创50逆势+0.73%连续两日强于大盘。成交2.56万亿地量。杀跌动能衰减但反弹无量，维持HOLD"
+
+- date: 2026-07-09
+  title: "A 股大盘分析报告 (7/9)"
+  url: /2026/07/09/A股大盘分析报告/
+  decision: BUY
+  confidence: 60
+  risk_score: 6.0
+  target_index: 上证指数
+  target_level: 4,037
+  actual_result: pending
+  actual_change: null
+  note: "放量反包！上证+1.65%收4037重回4000上方，深成指+3.07%/创业板+4.49%强势反包，科创50暴涨+8.42%领涨。成交2.91万亿较昨日放量约350亿，满足涨幅>1%且量能放大条件。硬科技从超跌中暴力回归，短线趋势转多"
+
+- date: 2026-07-10
+  title: "A 股大盘分析报告 (7/10)"
+  url: /2026/07/10/A股大盘分析报告/
+  decision: HOLD
+  confidence: 55
+  risk_score: 7.5
+  target_index: 上证指数
+  target_level: 3,996
+  actual_result: pending
+  actual_change: null
+  note: "冲高回落放量大跌。上证-1.00%收3996再度失守4000，深成指-2.29%/创业板-4.37%/科创50-5.53%全线回落，沪深300-1.96%。成交3.39万亿放量。昨日暴涨后获利盘集中兑现，芯片/算力硬件重挫，航天军工逆势走强。7/9 BUY信号面临回吐"
