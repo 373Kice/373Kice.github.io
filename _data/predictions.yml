@@ -1,6 +1,15 @@
 # 373Kice 历史预测追踪
 # 每次生成报告后更新此文件
 # actual_result: pending (待实际走势验证), hit (预测正确), miss (预测偏差)
+#
+# 【结算口径】统一 T+1（2026-08-30 全量重算，历史手工口径作废）
+#   基准收盘 = 预测日 D 当日（或之前最近）交易日的上证指数收盘
+#   结算收盘 = D 之后第一个交易日的上证指数收盘
+#   actual_change = (结算收盘 / 基准收盘 - 1) * 100
+#   判定：BUY  -> change > 0        记 hit，否则 miss
+#         SELL -> change < 0        记 hit，否则 miss
+#         HOLD -> |change| <= 1.0%  记 hit，否则 miss
+#   尚无后续交易日的记录保持 pending / null（如最新一期）
 
 - date: 2026-05-16
   title: "全球市场周报 (5/12-5/16)"
@@ -10,9 +19,10 @@
   risk_score: 7.4
   target_index: 上证指数
   target_level: 4,135
-  actual_result: pending
-  actual_change: null
+  actual_result: hit
+  actual_change: -0.09%
   note: "战略性减仓+对冲，上证PE历史分位99.67%，两融超2015年峰值27%"
+
 
 - date: 2026-05-18
   title: "A 股大盘分析报告 (5/18)"
@@ -22,9 +32,10 @@
   risk_score: 6.2
   target_index: 上证指数
   target_level: 4,131
-  actual_result: pending
-  actual_change: null
+  actual_result: hit
+  actual_change: +0.92%
   note: "缩量震荡三大指数微跌，科创50逆势+0.81%"
+
 
 - date: 2026-05-19
   title: "A 股大盘分析报告 (5/19)"
@@ -34,9 +45,10 @@
   risk_score: 6.5
   target_index: 上证指数
   target_level: 4,137
-  actual_result: pending
-  actual_change: null
+  actual_result: hit
+  actual_change: -0.18%
   note: "极度分化，科创50+1.32% vs 创业板-0.98%，新增美债5.15%风险变量"
+
 
 - date: 2026-05-20
   title: "A 股大盘分析报告 (5/20)"
@@ -46,9 +58,10 @@
   risk_score: 6.8
   target_index: 上证指数
   target_level: 4,162
-  actual_result: pending
-  actual_change: null
+  actual_result: miss
+  actual_change: -2.04%
   note: "科创50暴涨3.2%创年内新高但68%个股下跌，半导体+4.17%独舞，电力一日游-3.88%"
+
 
 - date: 2026-05-21
   title: "A 股大盘分析报告 (5/21)"
@@ -58,9 +71,10 @@
   risk_score: 7.8
   target_index: 上证指数
   target_level: 4,077
-  actual_result: pending
-  actual_change: null
+  actual_result: miss
+  actual_change: +0.87%
   note: "黑色星期四！上证单日暴跌-2.04%，大阴线击穿MA5/MA10/MA20三道均线，放量1.59万亿恐慌抛售"
+
 
 - date: 2026-05-22
   title: "A 股大盘分析报告 (5/22)"
@@ -70,9 +84,10 @@
   risk_score: 6.5
   target_index: 上证指数
   target_level: 4,108
-  actual_result: pending
-  actual_change: null
+  actual_result: hit
+  actual_change: +0.96%
   note: "大跌后强反弹日，深成指+2.06%创业板+2.57%领涨，元件+9.43%成新主线，但成交缩量至1.10万亿"
+
 
 - date: 2026-05-25
   title: "A 股大盘分析报告 (5/25)"
@@ -83,8 +98,9 @@
   target_index: 上证指数
   target_level: 4,153
   actual_result: miss
-  actual_change: -2.3%
+  actual_change: -0.17%
   note: "科创50飙涨5.88%创收盘历史新高至1896点，但此后8个交易日上证从4153跌至4058，BUY信号出现在短期顶点"
+
 
 - date: 2026-06-04
   title: "A 股大盘分析报告 (6/4)"
@@ -94,9 +110,10 @@
   risk_score: 7.0
   target_index: 上证指数
   target_level: 4,058
-  actual_result: pending
-  actual_change: null
+  actual_result: hit
+  actual_change: -0.74%
   note: "8日阴跌后上证失守4100至4058，科创50自1896历史高点回落8.3%，WTI原油暴跌4%+美国通胀股债双杀，AI赛道拥挤讨论升温"
+
 
 - date: 2026-06-05
   title: "A 股大盘分析报告 (6/5)"
@@ -106,9 +123,10 @@
   risk_score: 8.2
   target_index: 上证指数
   target_level: 4,028
-  actual_result: pending
-  actual_change: null
+  actual_result: hit
+  actual_change: -1.70%
   note: "科创50暴跌-4.01%创调整新低至1668，自历史高点1896回撤12%。创业板-3.2%，深成指-2.21%。美国5月非农17.2万超预期，加息预期骤升。TMT深幅回调，上证跌破半年线"
+
 
 - date: 2026-06-08
   title: "A 股大盘分析报告 (6/8)"
@@ -118,9 +136,10 @@
   risk_score: 8.5
   target_index: 上证指数
   target_level: 3,959
-  actual_result: pending
-  actual_change: null
+  actual_result: miss
+  actual_change: +1.28%
   note: "沪指暴跌-1.7%失守4000点至3959，科创50续跌-4.3%至1596，自历史高点回撤15.8%。全市场超4500股收绿，美联储加息预期+外围暴跌拖累，仅机器人概念逆市"
+
 
 - date: 2026-06-09
   title: "A 股大盘分析报告 (6/9)"
@@ -130,9 +149,10 @@
   risk_score: 6.5
   target_index: 上证指数
   target_level: 4,010
-  actual_result: pending
-  actual_change: null
+  actual_result: hit
+  actual_change: -0.42%
   note: "沪指绝地反弹+1.28%收复4000至4010，创业板+3.93%科创50+4.17%科技股全线反攻。5月出口增速19.4%超预期催化。但成交缩至1.17万亿为10日最低，缩量反弹持续性存疑"
+
 
 - date: 2026-06-12
   title: "A 股大盘分析报告 (6/12)"
@@ -142,9 +162,10 @@
   risk_score: 5.8
   target_index: 上证指数
   target_level: 4,032
-  actual_result: pending
-  actual_change: null
+  actual_result: miss
+  actual_change: +1.61%
   note: "放量反弹+1.12%至4032，成交1.537万亿创10日新高，3900+股上涨。银行/非银接棒领涨，科技股退潮（传媒-5.12%/计算机-4.88%）。美联储议息在即，风格切换信号明显"
+
 
 - date: 2026-06-15
   title: "A 股大盘分析报告 (6/15)"
@@ -154,9 +175,10 @@
   risk_score: 6.5
   target_index: 上证指数
   target_level: 4,096
-  actual_result: pending
-  actual_change: null
+  actual_result: miss
+  actual_change: -0.11%
   note: "美伊协议引爆全球股市！上证+1.61%至4097六连阳，创业板+5.30%科创50+5.12%，CPO/PCB/黄金/小金属集体爆发，成交1.40万亿。本周超级央行周美联储决议在即"
+
 
 - date: 2026-06-16
   title: "A 股大盘分析报告 (6/16)"
@@ -166,9 +188,10 @@
   risk_score: 6.3
   target_index: 上证指数
   target_level: 4,092
-  actual_result: pending
-  actual_change: null
+  actual_result: hit
+  actual_change: +0.40%
   note: "6连阳后首收十字星微跌0.11%至4092，创业板逆势+1.72%深强沪弱极致分化。布油暴跌5%跌破$80，特朗普宣布霍尔木兹海峡周五重开。超级央行周开启，成交缩至1.37万亿"
+
 
 - date: 2026-06-17
   title: "A 股大盘分析报告 (6/17)"
@@ -178,9 +201,10 @@
   risk_score: 5.8
   target_index: 上证指数
   target_level: 4,108
-  actual_result: pending
-  actual_change: null
+  actual_result: hit
+  actual_change: -0.43%
   note: "上证+0.40%收复4100至4108，科创50暴涨4.69%至1841，创业板+1.56%。陆家嘴论坛一行一局一会金融开放重磅信号，QDII扩容+离岸金融方案。今晚美联储决议。成交1.40万亿温和放量，科技成长主导"
+
 
 - date: 2026-06-18
   title: "A 股大盘分析报告 (6/18)"
@@ -190,9 +214,10 @@
   risk_score: 7.0
   target_index: 上证指数
   target_level: 4,090
-  actual_result: pending
-  actual_change: null
+  actual_result: miss
+  actual_change: +1.78%
   note: "3.33万亿天量下的极度分化！科创50+3.84%至1912创历史新高，创业板+2.05%至4252创历史新高，但上证-0.43%失守4100。中际旭创市值1.52万亿超茅台。陆家嘴论坛AI大模型科创板上市指引落地+七部门平台经济新政。3395只个股下跌(63%)，冲高4117后回落长上影十字星"
+
 
 - date: 2026-06-22
   title: "A 股大盘分析报告 (6/22)"
@@ -202,9 +227,10 @@
   risk_score: 6.5
   target_index: 上证指数
   target_level: 4,163
-  actual_result: pending
-  actual_change: null
+  actual_result: miss
+  actual_change: -1.37%
   note: "节后首日大象起舞！上证+1.78%至4163突破前高4117和5/25高点4153，创业板+2.52%/科创50+1.96%双双创历史新高。3.76万亿历史第二大天量放量4300亿。券商+6.43%集体涨停(牛市旗手)，保险+7.18%，小金属+6.99%。但黄白线分化权重涨小票弱，科技股资金净流出157亿转向金融有色，风格切换暗流涌动。布林上轨4180仅距17点短线压力"
+
 
 - date: 2026-06-23
   title: "A 股大盘分析报告 (6/23)"
@@ -214,9 +240,10 @@
   risk_score: 7.5
   target_index: 上证指数
   target_level: 4,106
-  actual_result: pending
-  actual_change: null
+  actual_result: miss
+  actual_change: +0.11%
   note: "节后第二日冲高回落杀跌！上证-1.37%收4106失守4117前期高点，深成指-3.17%/创业板-3.84%/科创50-1.68%/沪深300-2.77%全线下挫。昨日3.76万亿天量未能延续，今日缩量-58%至1.59万亿典型的'流动性陷阱'，金融权重(券商保险)领跌兑现。资金从金融+科技切换到银行+医药防御主线，中国银行+3.37%化学制药+2.17%生物制品+1.68%成避风港。美股科技股NVDA-3.35%/TSLA-5.39%/MU-10.66%传导，创业板-3.84%最弱。MACD红柱缩短DIF/DEA有死叉风险，6/22 BUY信号被打脸"
+
 
 - date: 2026-06-30
   title: "A 股大盘分析报告 (6/30)"
@@ -226,9 +253,10 @@
   risk_score: 6.0
   target_index: 上证指数
   target_level: 4,094
-  actual_result: pending
-  actual_change: null
+  actual_result: hit
+  actual_change: +0.44%
   note: "6月收官日科技王者归来！上证+0.50%收4094温和上涨，科创50暴涨+3.85%收2207逼近前高2214，创业板+2.99%收4342逼近前高4353，深成指+2.48%，沪深300+1.07%权重滞涨。73%个股上涨赚钱效应回暖，与6/18 63%下跌形成反转。工信部等八部门重磅发布AI+算力+工业互联网三年行动方案，明确'到2030年建设5万张工业5G专网'。寒武纪10年100万倍神话驱动AI算力主线，五大科技板块齐涨5%以上(光学光电子+7.18%/通信设备+5.18%/军工电子+5.17%)，主力净流入通信设备100亿/光学77亿。但成交缩量至1.53万亿(-10%)量价背离，监管一夜67份风险提示寒武纪紧急发风险提示，市场情绪过热。6月全月+0.27%十字星收官"
+
 
 - date: 2026-07-02
   title: "A 股大盘分析报告 (7/2)"
@@ -238,9 +266,10 @@
   risk_score: 8.5
   target_index: 上证指数
   target_level: 4,029
-  actual_result: pending
-  actual_change: null
+  actual_result: miss
+  actual_change: +0.37%
   note: "黑色星期四！科创50暴跌-7.88%收1987自2207两日回撤10%，半导体-8.05%/通信设备-8.12%全线崩跌，创业板-5.70%破4200至4017，深成指-3.85%，上证-2.03%破4100至4029击穿四道均线。Meta卖算力砸崩AI硬件信仰，算力过剩恐慌蔓延。84%个股下跌仅贵金属+5.43%避风港。美国6月非农仅5.7万远低于预期加息押注削减但美股拉升未能提振A股。6/30 BUY(62%)信号被打脸——科技股大涨后3天必杀跌规律第三次验证"
+
 
 - date: 2026-07-03
   title: "A 股大盘分析报告 (7/3)"
@@ -250,9 +279,10 @@
   risk_score: 6.8
   target_index: 上证指数
   target_level: 4,044
-  actual_result: pending
-  actual_change: null
+  actual_result: hit
+  actual_change: -0.06%
   note: "大跌次日缩量弱反弹。上证+0.37%收4044险守4000，深成指+0.64%/沪深300+0.62%相对强势，但科创50-0.59%仍承压。全市场成交3.18万亿较昨日缩量约2700亿。机器人/汽车零部件/贵金属领涨，半导体继续休整。7/2 SELL(72%)信号后未继续杀跌，短线进入弱修复但均线空头+MACD绿柱扩大，持续性存疑"
+
 
 - date: 2026-07-06
   title: "A 股大盘分析报告 (7/6)"
@@ -262,9 +292,10 @@
   risk_score: 6.5
   target_index: 上证指数
   target_level: 4,041
-  actual_result: pending
-  actual_change: null
+  actual_result: miss
+  actual_change: -1.26%
   note: "节后首日缩量震荡。上证-0.06%收4041近乎平收，深成指-1.16%/创业板-1.77%补跌，科创50逆势+1.04%止跌。成交3.09万亿较7/3缩量约900亿。大跌后弱势整理，硬科技初现企稳信号，未达BUY/SELL阈值维持HOLD"
+
 
 - date: 2026-07-07
   title: "A 股大盘分析报告 (7/7)"
@@ -274,9 +305,10 @@
   risk_score: 6.8
   target_index: 上证指数
   target_level: 3,990
-  actual_result: pending
-  actual_change: null
+  actual_result: hit
+  actual_change: -0.49%
   note: "上证-1.26%收3990失守4000关口，深成指-1.24%/创业板-0.94%同步走弱，科创50微涨+0.28%。成交2.58万亿继续缩量。普跌格局但未达-1.5%系统性阈值，维持HOLD，风险较前两日抬升"
+
 
 - date: 2026-07-08
   title: "A 股大盘分析报告 (7/8)"
@@ -286,9 +318,10 @@
   risk_score: 6.3
   target_index: 上证指数
   target_level: 3,971
-  actual_result: pending
-  actual_change: null
+  actual_result: miss
+  actual_change: +1.65%
   note: "地量磨底。上证-0.49%收3971跌幅收窄，深成指-1.87%/创业板-1.70%再创新低，科创50逆势+0.73%连续两日强于大盘。成交2.56万亿地量。杀跌动能衰减但反弹无量，维持HOLD"
+
 
 - date: 2026-07-09
   title: "A 股大盘分析报告 (7/9)"
@@ -298,9 +331,10 @@
   risk_score: 6.0
   target_index: 上证指数
   target_level: 4,037
-  actual_result: pending
-  actual_change: null
+  actual_result: miss
+  actual_change: -1.00%
   note: "放量反包！上证+1.65%收4037重回4000上方，深成指+3.07%/创业板+4.49%强势反包，科创50暴涨+8.42%领涨。成交2.91万亿较昨日放量约350亿，满足涨幅>1%且量能放大条件。硬科技从超跌中暴力回归，短线趋势转多"
+
 
 - date: 2026-07-10
   title: "A 股大盘分析报告 (7/10)"
@@ -310,9 +344,10 @@
   risk_score: 7.5
   target_index: 上证指数
   target_level: 3,996
-  actual_result: pending
-  actual_change: null
+  actual_result: miss
+  actual_change: -2.06%
   note: "冲高回落放量大跌。上证-1.00%收3996再度失守4000，深成指-2.29%/创业板-4.37%/科创50-5.53%全线回落，沪深300-1.96%。成交3.39万亿放量。昨日暴涨后获利盘集中兑现，芯片/算力硬件重挫，航天军工逆势走强。7/9 BUY信号面临回吐"
+
 
 - date: 2026-07-27
   title: "A 股大盘分析报告 (7/27)"
@@ -322,9 +357,10 @@
   risk_score: 6.5
   target_index: 上证指数
   target_level: 3,858
-  actual_result: pending
-  actual_change: null
+  actual_result: miss
+  actual_change: -1.16%
   note: "五大指数全线反弹！上证+1.15%收3858站上5日均线，深成指+2.72%/创业板+3.16%领涨，科创50+1.16%/沪深300+1.15%。两市成交2.08万亿放量7.2%。玻璃玻纤+9.65%/元件+6.25%板块普涨超跌修复，消费板块逆势走强。中美AI关税摩擦升温+英伟达7500亿循环融资引担忧+美股存储暴跌闪迪-11%。长下影阳线3790有支撑但仍处MA10下方MACD空头，7/9 BUY后即回吐历史规律警示"
+
 
 - date: 2026-07-28
   title: "A 股大盘分析报告 (7/28)"
@@ -334,9 +370,10 @@
   risk_score: 8.5
   target_index: 上证指数
   target_level: 3,813
-  actual_result: pending
-  actual_change: null
+  actual_result: miss
+  actual_change: +0.40%
   note: "黑色星期二！创业板暴跌-7.35%创阶段新低至3327，科创50-6.33%至1693，深成指-4.52%，上证-1.16%至3813。全球芯片抛售蔓延：康宁-20%/美光-12%/闪迪-16%引爆AI硬件信仰崩塌。科技权重集体抛售仅银行/白酒/食品防御逆势。缩量暴跌缺乏承接。7/27 BUY信号被隔日暴跌打脸，科技股大涨后杀跌规律第4次验证"
+
 
 - date: 2026-07-29
   title: "A 股大盘分析报告 (7/29)"
@@ -346,9 +383,10 @@
   risk_score: 7.0
   target_index: 上证指数
   target_level: 3,828
-  actual_result: pending
-  actual_change: null
+  actual_result: hit
+  actual_change: -0.62%
   note: "昨日暴跌后弱反弹。上证+0.40%收3828低于MA5，深成指+1.10%/创业板+1.55%领涨，但科创50逆势-0.87%连续杀跌。两市放量至2.30万亿(+13.3%)，消费/教育/游戏接棒科技风格切换加速。兆易创新2500亿龙头自救式回购10-20亿+增持不低于10亿，华尔街建仓长鑫科技外资看多AI。MLCC龙头涨价30%。美联储决议今夜落地+美股深夜跳水+韩国救市，外围不确定性高企。上证低于所有7条均线完全空头排列，MACD绿柱缩小但DIF=-60深度空头"
+
 
 - date: 2026-07-30
   title: "A 股大盘分析报告 (7/30)"
@@ -358,9 +396,10 @@
   risk_score: 7.5
   target_index: 上证指数
   target_level: 3,805
-  actual_result: pending
-  actual_change: null
+  actual_result: hit
+  actual_change: +0.72%
   note: "午后深V修复！上证-0.62%收3805盘中最低3767拉回守住3800，但创业板-3.97%/科创50-5.38%科技股恐慌杀跌。美联储维持利率3.5%-3.75%不变，隔夜费城半导体暴跌5.33%五连跌传导。白酒+3.54%/银行+2.67%逆势走强工行建行双创历史新高，CPO跌停潮中际旭创-9%寒武纪-9%。两市成交2.36万亿放量467亿超3600股下跌。美股盘后存储芯片大反弹闪迪+20%+政治局会议定调+4500亿ETF流入+60家科技回购潮。上证完全空头排列KDJ金叉雏形布林下轨3725支撑"
+
 
 - date: 2026-07-31
   title: "A 股大盘分析报告 (7/31)"
@@ -370,9 +409,10 @@
   risk_score: 6.8
   target_index: 上证指数
   target_level: 3,832
-  actual_result: pending
-  actual_change: null
+  actual_result: miss
+  actual_change: -0.59%
   note: "科技AI+核电双线爆发！5大指数4涨但全部高开低走：上证+0.72%收3832权重压盘，深成指+2.21%/创业板+3.06%/科创50+2.99%领涨，沪深300+0.85%。两市成交2.5万亿放量7-12%。国常会核准4个核电项目总投资超1700亿引爆核电主线，AI应用+短剧营销全线爆发：词元概念+11.45%/Kimi+10.21%/AI营销+8.67%。主力净流入半导体110亿/元件99亿/通信61亿扭转5日累计净流出。但创业板MACD绿柱持续扩大+DIF=-172中期仍弱+美股存储高开低走闪迪盘后跌6%+9连板爱丽家居特停，下周8月中报季业绩雷风险。BUY规则触发但权重压盘压制置信度60%"
+
 
 - date: 2026-08-03
   title: "A 股大盘分析报告 (8/3)"
@@ -382,9 +422,10 @@
   risk_score: 7.0
   target_index: 上证指数
   target_level: 3,810
-  actual_result: pending
-  actual_change: null
+  actual_result: hit
+  actual_change: +0.33%
   note: "科创50单日暴跌-5.08%！5大指数全绿但分化极致：上证-0.59%收3809.66险守3800，深成指-0.96%/创业板-1.24%/沪深300-0.98%权重股护盘。两市缩量5488亿（量化交易监管压低交易量所致）。美股存储芯片隔夜重挫美光/闪迪-4%/SK海力士-3%传导A股存储概念，资金防御性回流电力/电网/军工：电机+4.63%/风电+3.73%/航天装备+3.59%/电网设备+2.68%。两部门盘后联合发布电力赛道重磅利好+融资余额单月下降超4000亿杠杆撤退+广发证券警告'AI多重顶才是常态'。上证低于所有均线MACD绿柱极弱DIF/DEA粘合，距布林下轨3724仅86点。7/31 BUY(60%)信号被打脸——'科技股大涨后必杀跌'规律第六次应验"
+
 
 - date: 2026-08-04
   title: "A 股大盘分析报告 (8/4)"
@@ -394,9 +435,10 @@
   risk_score: 6.5
   target_index: 上证指数
   target_level: 3,822
-  actual_result: pending
-  actual_change: null
+  actual_result: hit
+  actual_change: +1.47%
   note: "科技股暴力反弹！创业板暴涨+5.65%领涨，科创50+4.09%深成指+3.25%沪深300+1.27%，上证仅+0.33%收3822权重压盘。两市成交2.21万亿放量10.8%。通信设备+10.74%涨停潮（欣天科技+20%），光芯片+10.26%/博通概念+9.60%全线爆发，主力净流入通信设备223亿/元件119亿/半导体116亿。美股隔夜费城半导体暴涨5%+存储芯片全线大涨催化，国家大基金行动曝光利好半导体。MACD柱线转正(+3.10)+KDJ金叉+站上MA5和SAR技术面改善。但光模块利空突袭+美国拟禁中国数据中心设备+上证仅涨0.33%权重压盘+7/31 BUY信号被打脸历史规律警示"
+
 
 - date: 2026-08-05
   title: "A 股大盘分析报告 (8/5)"
@@ -406,9 +448,10 @@
   risk_score: 6.5
   target_index: 上证指数
   target_level: 3,878
-  actual_result: pending
-  actual_change: null
+  actual_result: hit
+  actual_change: +0.57%
   note: "五大指数全线放量大涨！上证+1.47%收3878突破MA5/MA10/MA20三线创10日新高，深成指+1.86%/创业板+1.32%/科创50暴涨+4.78%领涨/沪深300+1.24%。两市成交2.66万亿放量20.4%为10日最高。半导体净流入136.7亿(173/178涨)引领科技全面反攻，玻璃玻纤+7.90%/电子化学品+7.86%/贵金属+7.72%板块普涨。中方宣布5项对美反制措施催化信创自主可控，大硅片+7.40%/中芯国际概念+6.87%爆发。MACD柱线扩大至+13.55+KDJ金叉K63>D52+站上布林中轨+SAR收复技术面全面改善。但中美摩擦升级+光模块禁令传闻+美股盘后半导体跳水ARM-4%/闪迪-3%+RSI2=89.18严重超买+'大涨后必杀跌'规律7次验证构成压制"
+
 
 - date: 2026-08-06
   title: "A 股大盘分析报告 (8/6)"
@@ -418,9 +461,10 @@
   risk_score: 6.8
   target_index: 上证指数
   target_level: 3,900
-  actual_result: pending
-  actual_change: null
+  actual_result: miss
+  actual_change: +1.02%
   note: "上证三连阳+0.57%收3900，深成指-0.24%/创业板-0.55%/沪深300-0.15%收绿，科创50+0.45%。两市成交1.17万亿缩量约3.5%。美股存储芯片隔夜暴跌（闪迪-14%/西数-19%/SK海力士-6%/美光-4%）但A股科技显韧性，通信设备净流入259亿/元件191亿/电子化学品161亿。电子化学品+4.73%/煤炭+4.56%/玻璃玻纤+3.85%领涨。技术上MACD柱转正+金叉雏形但RSI2=93/KDJ J=106严重超买，上方MA30(3922)/MA250(3964)/MA60(4006)密集压制。未达BUY规则（涨幅未>1%且缩量），维持HOLD"
+
 
 - date: 2026-08-07
   title: "A 股大盘分析报告 (8/7)"
@@ -430,9 +474,10 @@
   risk_score: 7.0
   target_index: 上证指数
   target_level: 3,940
-  actual_result: pending
-  actual_change: null
+  actual_result: hit
+  actual_change: +0.67%
   note: "上证+1.02%三连阳收3940突破MA30，深成指+1.42%/创业板+1.36%/科创50+2.51%全线飘红。两市成交2.66万亿放量5%。CRO暴涨10.63%医药全线爆发，元件+6.74%半导体+3.29%科技资金净流入超225亿。寒武纪中报净利23亿增122%引爆AI算力。但RSI2=97/KDJ J=114极度超买，上方MA250/MA60/MA120/BOLL上轨密集压制仅距25-92点。美国7月非农爆冷减少2.3万，加息押注削减。BUY规则触发但极度超买+规律风险压制置信度58%"
+
 
 - date: 2026-08-10
   title: "A 股大盘分析报告 (8/10)"
@@ -446,6 +491,7 @@
   actual_change: -0.82%
   note: "上证+0.67%六连阳收3967逼近MA60(3999)与布林上轨(3981)，但深成指几乎平收、科创50-0.36%、创业板-0.73%分化明显。两市成交2.52万亿缩量5.3%，KDJ J=116.99/RSI2=98.35极度超买。军工/贵金属/医疗服务领涨，资金流入贵金属114亿/通用设备107亿/电网设备100亿。央行十五五规划+江波龙业绩暴增715倍+阿里云数据中心扩产+油价上涨。未达BUY/SELL阈值，维持HOLD"
 
+
 - date: 2026-08-11
   title: "A 股大盘分析报告 (8/11)"
   url: /2026/08/11/A股大盘分析报告/
@@ -454,9 +500,10 @@
   risk_score: 7.0
   target_index: 上证指数
   target_level: 3,934
-  actual_result: pending
-  actual_change: null
+  actual_result: hit
+  actual_change: +0.32%
   note: "上证-0.82%收3934止步六连阳，深成指-0.40%/科创50-1.63%，创业板逆势+0.34%。两市成交2.32万亿缩量8.6%。通信设备/光伏/CRO领涨，上海算力政策+工业富联业绩共振，但板块轮动加速、KDJ/RSI超买回落，短线进入震荡整固"
+
 
 - date: 2026-08-12
   title: "A 股大盘分析报告 (8/12)"
@@ -466,9 +513,10 @@
   risk_score: 6.8
   target_index: 上证指数
   target_level: 3,947
-  actual_result: pending
-  actual_change: null
+  actual_result: hit
+  actual_change: -0.50%
   note: "成长指数领涨但权重压盘！上证+0.32%收3946，深成指+1.09%/创业板+1.49%/科创50+1.61%集体反弹，沪深300+0.58%。两市成交2.15万亿缩量7.6%。AI光通信主线回归：Lumentum绩后涨10%+美股存储芯片全线狂飙，通信设备净流入131.5亿/半导体59.7亿/元件31.8亿扭转5日累计流出。光芯片+5.66%/锗镓+4.22%/房地产开发+3.47%同步爆发。上证站上MA5/10/20/30但KDJ J=98.54与WR6=13.71双双逼近超买警戒，MA60(3992)/MA250(3970)/BOLL上轨(3972)密集压制25-46点。'科技股大涨后必杀跌'规律8次验证+8月中报季+缩量反弹压制BUY，维持HOLD"
+
 
 - date: 2026-08-17
   title: "A 股大盘分析报告 (8/17)"
@@ -478,9 +526,10 @@
   risk_score: 6.5
   target_index: 上证指数
   target_level: 3,983
-  actual_result: miss
-  actual_change: -2.24%
+  actual_result: hit
+  actual_change: +0.19%
   note: "放量收复双重牛熊线！5大指数全线+1%以上触发BUY：上证+1.41%收3982首次站上MA60(3983)/MA250(3974)，深成指+2.44%/创业板+3.14%/科创50+4.14%/沪深300+1.61%。两市成交约2.45万亿放量12.3%，上证单日1.113万亿(+12.3%)。半导体主力净流入200.49亿（171/178上涨）创近期新高，通信设备+59.74亿/电子化学品+31.81亿同向流入，靶材+6.22%/长鑫存储+5.86%/HBM+5.62%/国家大基金+5.68%概念爆发。三重催化共振：①'六张网'建设国务院政策利好；②宇树科技8/19科创板上市；③小摩看涨美股芯片股深夜大涨。MACD DIF首次上穿零轴+红柱扩大至38.32（技术面首次确认）+KDJ金叉三值均80+/SAR多头+CCI=90.73强势。但KDJ J=94.15接近超买+MA120(4024)与BOLL上轨(3994)双层压制+'科技股大涨后必杀跌'规律9次验证限制信心仅65%。8/19暴跌-2.40%假突破确认"
+
 
 - date: 2026-08-18
   title: "A 股大盘分析报告 (8/18)"
@@ -490,9 +539,10 @@
   risk_score: 6.8
   target_index: 上证指数
   target_level: 3,990
-  actual_result: hit
+  actual_result: miss
   actual_change: -2.40%
   note: "上证微红+0.19%收3990守住MA60/MA250，但深成指-0.56%/创业板-0.93%大幅走弱，科创50仅+0.11%。农业板块（种植业+9.54%）集体爆发，光学光电子净流入155亿逆势吸金。两市成交约2.40万亿基本持平，主力资金净流出208亿。外部美债危机+美股芯片跳水+伊朗局势压制风险偏好，KDJ J=99.57极度超买"
+
 
 - date: 2026-08-19
   title: "A 股大盘分析报告 (8/19)"
@@ -503,8 +553,9 @@
   target_index: 上证指数
   target_level: 3,894
   actual_result: miss
-  actual_change: 1.48%
+  actual_change: +0.24%
   note: "黑色星期三全线暴跌！5大指数全线跌逾1.5%：上证-2.40%收3894击穿5条均线，科创50-6.89%/创业板-6.26%/深成指-5.01%/沪深300-2.90%。两市放量至2.51万亿（+4.6%）恐慌性抛售。隔夜美股芯片全线大跌+全球债市抛售风暴为外部导火索，8/17放量突破MA60/MA250后仅2日即跌破假突破确认。KDJ死叉J从99暴跌至36/RSI2从91跌至16极度超卖/MACD红柱从39.51急缩至26.17/SAR跌破转空。资金逃向银行/焦炭等防御板块科技板块全军覆没。8/17 BUY(65%)信号被打脸——'科技股大涨后必杀跌'规律第10次验证。后续8交易日修复：上证8/24最低3882(-0.32%)后反弹至8/28的3952(+1.48%)，SELL对权重股失误；但创业板-1.41%/科创50-0.32%，对成长股正确。风格判断（防御占优、科技承压）完全应验，低估了蓝筹护盘能力"
+
 
 - date: 2026-08-28
   title: "A 股大盘分析报告 (8/28)"

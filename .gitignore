@@ -126,3 +126,8 @@ venv.bak/
 .jekyll-cache
 .workbuddy/
 .playwright-cli/
+
+# 本地构建日志 / 备份
+build_*.txt
+bundle_lock_log.txt
+Gemfile.lock.bak
