@@ -4,7 +4,7 @@ source "https://rubygems.org"
 # Version constraints ensure compatibility with GitHub Pages build environment
 gem "jekyll", "~> 4.4"
 gem "jekyll-paginate", "~> 1.1"
-gem "kramdown", "~> 2.5"
+gem "kramdown", "~> 2.6"
 gem "rouge", "~> 4.5"
 
 # For Ruby >= 3.0, webrick is not bundled
